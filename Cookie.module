@@ -25,6 +25,8 @@ bilibili签到 = type=http-response,pattern=^https:\/\/(www|live)\.bilibili\.com
 京喜token = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/dreamfactory\/generator\/CollectCurrentElectricity,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 京喜token = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/jxcfd\/consume\/CashOut,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 
+# 来客有礼 Cookie.
+lkyl.js = type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 
 [MITM]
 hostname = draw.jdfcloud.com, m.gdoil.cn, music.163.com, *.bilibili.com, api.m.jd.com,, ms.jr.id.com, ifac*.iqiyi.com, api.m.jd.com, account.huami.com, wq.jd.com,m.jingxi.com,
