@@ -24,5 +24,8 @@ http-request https:\/\/.*\.dushu\.io\/* requires-body=1,max-size=0,script-path= 
 # > 香蕉视频去广告
 http-response https?:\/\/.*\.*apps\.com\/(ucp\/index|getGlobalData|.+\/reqplay\/) requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Gx3dong/Surge/master/JS/xjsp.js
 
+#解锁白描黄金会员
+http-response ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wubulaba/surgescript/master/Script/Baimiao.js,script-update-interval=0
+
 [MITM]
-hostname = ap*.intsig.net, vip1.kuwo.cn, api1000.gdqeb.club, *.dushu.io, %APPEND% api.m.jd.com, *.*apps.com
+hostname = ap*.intsig.net, vip1.kuwo.cn, api1000.gdqeb.club, *.dushu.io, %APPEND% api.m.jd.com, *.*apps.com, baimiao.uzero.cn
