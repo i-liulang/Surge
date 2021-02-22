@@ -6,6 +6,7 @@
 # > 京东
 # 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
 获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+获取京东Cookie = type=http-request,pattern=^https:\/\/wq\.jd\.com\/user_new\/info\/GetJDUserInfoUnion,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/JD_extra_cookie.js
 
 # > 网易云音乐
 # 浏览器访问并登录: https://music.163.com/m/login
@@ -19,7 +20,7 @@ bilibili签到 = type=http-response,pattern=^https:\/\/(www|live)\.bilibili\.com
 
 爱奇艺获取Cookie = type=http-request,pattern=^https?:\/\/iface(\d)?\.iqiyi\.com\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
-小米运动 = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login,requires-body=1,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/backUp/xmSports.js
+小米运动 = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login,requires-body=1,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js
 
 京喜token = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 京喜token = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/dreamfactory\/generator\/CollectCurrentElectricity,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
