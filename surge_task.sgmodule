@@ -5,6 +5,7 @@
 hostname = %APPEND% wq.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, wq.jd.com
 
 [Script]
+她的节享京豆 = type=cron,cronexp="0 8,21 1-8/1 3 *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_firecrackers.js
 宠汪汪喂食 = type=cron,cronexp="15 */1 * * *",wake-system=1,timeout=20,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_joy_feedPets.js
 进店领豆 = type=cron,cronexp="7 0 * * *",wake-system=1,timeout=20,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_shop.js
 小鸽有礼2 = type=cron,cronexp="30 7 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xgyl.js
