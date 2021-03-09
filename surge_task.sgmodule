@@ -6,7 +6,7 @@ hostname = %APPEND% wq.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.co
 
 [Script]
 
-京东国际-环球挑战赛 = type=cron,cronexp="6 6,15 8-31 3 *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global.js
+京东国际-环球挑战赛 = type=cron,cronexp="6 19 8-31 3 *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global.js
 京小兑 = type=cron,cronexp="30 10 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jxd.js
 京东超市-大转盘 = type=cron,cronexp="3 8 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_marketLottery.js
 京东小魔方 = type=cron,cronexp="  10 8 * * *   ",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/master/jd_xmf.js
