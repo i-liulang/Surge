@@ -2,9 +2,10 @@
 #!desc=签到、提醒等定时任务
 
 [MITM]
-hostname = %APPEND% me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, wq.jd.com
+hostname = %APPEND% me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, wq.jd.com, m.jingxi.com
 
 [Script]
+京喜工厂电力收取 = type=http-request,pattern=https://m.jingxi.com/dreamfactory/generator/CollectCurrentElectricity?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/jxcollect.js,script-update-interval=0
 城城分现金 = type=cron,cronexp="12 0 19-24 3 * ",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_city_cash.js
 百变大咖秀 = type=cron,cronexp="12 10,11 * * 2-5",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_entertainment.js
 金口碑奖投票 = type=cron,cronexp="5 10 * 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_mgold.js
