@@ -7,7 +7,6 @@ hostname = %APPEND% me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huam
 [Script]
 乘风破浪的姐姐 = type=cron,cronexp="12 12 24-26 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_sister.js
 答题赢京豆 = type=cron,cronexp="5 1 23-25 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_grassy.js
-城城分现金 = type=cron,cronexp="12 0 19-24 3 * ",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_city_cash.js
 百变大咖秀 = type=cron,cronexp="12 10,11 * * 2-5",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_entertainment.js
 金口碑奖投票 = type=cron,cronexp="5 10 * 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_mgold.js
 5G超级盲盒 = type=cron,cronexp="5 1,6,11,16,21 * 3-4 * ",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_super5g.js
@@ -36,7 +35,7 @@ hostname = %APPEND% me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huam
 CrazyJoy任务 = type=cron,cronexp="7 7 * * *",wake-system=1,timeout=20,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_crazy_joy.js
 监控crazyJoy分红 = type=cron,cronexp="10 12 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_crazy_joy_bonus.js
 crazyJoy挂机 = type=cron,cronexp="10 1,12 * * *",wake-system=1,timeout=20,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_crazy_joy_coin.js
-京小超兑换奖品 = type=cron,cronexp="2 0,1 0 * * *",wake-system=1,timeout=20,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_blueCoin.js
+京小超兑换奖品 = type=cron,cronexp="0 0,1,4 0 * * *",wake-system=1,timeout=20,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_blueCoin.js
 京喜财富岛 = type=cron,cronexp="0 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/moposmall/Script/main/Me/jx_cfd.js
 京喜财富岛兑换提醒 = type=cron,cronexp="30 6,12,22 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/moposmall/Script/main/Me/jx_cfd_exchange.js
 小米运动 = type=cron,cronexp="15 19 * * *",wake-system=1,timeout=20,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js
