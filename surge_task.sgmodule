@@ -5,6 +5,7 @@
 hostname = %APPEND% me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, wq.jd.com,
 
 [Script]
+京东小魔方 = type=cron,cronexp="10 10 25-27 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_xmf.js
 乘风破浪的姐姐 = type=cron,cronexp="12 12 24-26 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_sister.js
 答题赢京豆 = type=cron,cronexp="5 1 23-25 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/z_grassy.js
 百变大咖秀 = type=cron,cronexp="12 10,11 * * 2-5",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_entertainment.js
