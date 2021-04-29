@@ -8,6 +8,7 @@ https:\/\/.*\.*apps.com header-replace Cookie xxx_api_auth=636438646663343739356
 
 
 [Script]
+
 # 扫描全能王 pro
 http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js
 
@@ -32,5 +33,8 @@ http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-b
 #百度云倍速播放
 http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
 
+#哔哩哔哩, 港澳台番剧自动切换地区 & 显示豆瓣评分
+Bili Region = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+
 [MITM]
-hostname = %APPEND% ap*.intsig.net, vip1.kuwo.cn, api1000.gdqeb.club, *.dushu.io, api.m.jd.com, *.*apps.com, baimiao.uzero.cn, pan.baidu.com,
+hostname = %APPEND% ap*.intsig.net, vip1.kuwo.cn, api1000.gdqeb.club, *.dushu.io, api.m.jd.com, *.*apps.com, baimiao.uzero.cn, pan.baidu.com, ap?.bilibili.com
