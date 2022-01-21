@@ -14,6 +14,9 @@ TrafficStatistics = script-name=TrafficStatistics,update-interval=1
 #机场信息
 Sub_info = script-name=Sub_info,update-interval = 43200
 
+#新冠疫情查询
+covid19 = script-name=covid19, title="新冠疫情查询", content="请刷新", update-interval=3600
+
 #节假日倒计时
 节假日倒计时 = script-name=节假日倒计时,update-interval=600
 
@@ -31,6 +34,9 @@ TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubuserc
 #机场信息
 #必须修改的字段:你encode后的机场订阅链接
 Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=https%3A%2F%2Fservice-p156la04-1303094187.gz.apigw.tencentcs.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D70a3d824b2b876683871e9a0ce50c9bb&reset_day=1&title=Flyint&icon=opticaldisc&color=#5AC8FA
+
+#新冠疫情查询
+covid19 = type=generic, script-path=https://raw.githubusercontent.com/smartmimi/conf/master/surge/covid19.js
 
 #节假日倒计时
 节假日倒计时 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/Timecard.js
