@@ -14,6 +14,9 @@ TrafficStatistics = script-name=TrafficStatistics,update-interval=1
 #机场信息
 Sub_info = script-name=Sub_info,update-interval = 43200
 
+#Netflix策略组自动控制
+NetflixSelect = script-name=NetflixSelect, update-interval=3600
+
 #新冠疫情查询
 covid19 = script-name=covid19, title="新冠疫情查询", content="请刷新", update-interval=3600
 
@@ -34,6 +37,12 @@ TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubuserc
 #机场信息
 #必须修改的字段:你encode后的机场订阅链接
 Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=https%3A%2F%2Fservice-p156la04-1303094187.gz.apigw.tencentcs.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D70a3d824b2b876683871e9a0ce50c9bb&reset_day=1&title=Flyint&icon=opticaldisc&color=#5AC8FA
+
+#netflix策略组控制
+#必须更改的字段 netflixGroup 填写你Netflix策略组名称
+#详情请阅读：https://github.com/fishingworld/something/blob/main/NetflixSelect/README.md
+NetflixSelect = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/nf_autoselect.js, argument=icon1=checkmark.circle&color1=#55ba94&icon2=checkmark.circle.trianglebadge.exclamationmark&color2=#9a9ced&icon3=hand.raised.circle&color3=#ea5532&netflixGroup=𝙉𝙚𝙩𝙛𝙡𝙞𝙭 ⁺
+NetflixChecker = type=cron,cronexp=5 4 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/nf_autocheck.js ,script-update-interval=0,control-api=1
 
 #新冠疫情查询
 covid19 = type=generic, script-path=https://raw.githubusercontent.com/smartmimi/conf/master/surge/covid19.js
