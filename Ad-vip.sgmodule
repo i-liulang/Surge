@@ -27,7 +27,6 @@ https:\/\/.*\.*apps.com header-replace Cookie xxx_api_auth=336335626634653636623
 # > 91视频解锁会员
 http-response ^https?:\/\/ap\w{1}\.(weilaixushi|orientlion|qdjdswkj|0954auto)\.com\/m_user\/info requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/91SPCrack.js
 
-
 # > 微信 去除公众号文章底部广告  mp.weixin.qq.com
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
@@ -52,7 +51,7 @@ http-response https:\/\/api\.shayujizhang\.com\/account\/grant\/detail\/info req
 扫描全能 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
 
 # > Boxjs（稳定版+测试版）
-#会话数据 = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
+会话数据 = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
 会话数据 = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 
 # > 彩云天气_SVIP
