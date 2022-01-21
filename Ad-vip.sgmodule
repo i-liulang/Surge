@@ -11,6 +11,9 @@ DOMAIN,boxjs.net,𝙋𝙍𝙊𝙓𝙔
 # > ONE无限制去除所有广告 app.ap.d3yuiw4.com,
 URL-REGEX,^http:\/\/app\.api\.d3yuiw4\.com\/api\/app\/ad\/.+,REJECT-TINYGIF
 
+# > 91视频开屏广告
+URL-REGEX,^https?:\/\/.*\/common\/splash_config ,REJECT-TINYGIF
+
 # 分割线——————————————————————————
 
 [Header Rewrite]
