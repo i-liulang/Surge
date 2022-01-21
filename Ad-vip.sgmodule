@@ -8,6 +8,8 @@
 # > boxjs代理
 DOMAIN,boxjs.net,𝙋𝙍𝙊𝙓𝙔
 
+# > ONE无限制去除所有广告 app.ap.d3yuiw4.com,
+URL-REGEX,^http:\/\/app\.api\.d3yuiw4\.com\/api\/app\/ad\/.+,REJECT-TINYGIF
 
 # 分割线——————————————————————————
 
@@ -104,5 +106,5 @@ iOS14美标空气质量 = type=http-response,pattern=^https:\/\/weather-data\.ap
 # 分割线——————————————————————————
 
 [MITM]
-hostname = mp.weixin.qq.com, *.woailuojingdong.com,*.dayuxiangqian.com, *.*apps.com, api.shayujizhang.com, account.wps.cn, ap*.intsig.net, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, weather-data.apple.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store
+hostname = app.ap.d3yuiw4.com, mp.weixin.qq.com, *.woailuojingdong.com,*.dayuxiangqian.com, *.*apps.com, api.shayujizhang.com, account.wps.cn, ap*.intsig.net, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, weather-data.apple.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store
 
