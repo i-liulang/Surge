@@ -20,7 +20,8 @@ https:\/\/.*\.*apps.com header-replace Cookie xxx_api_auth=336335626634653636623
 
 [Script]
 # > 精东无限购买- (*.woailuojingdong.com,*.dayuxiangqian.com)
-http-response ^https?:\/\/.+\.((.*woailuojingdong.*)|(.*dayuxiangqian.*))\.(com|cn)(:\d{2,5})?\/cxapi/.+$ requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/jd.js
+#http-response ^https?:\/\/.+\.((.*woailuojingdong.*)|(.*dayuxiangqian.*))\.(com|cn)(:\d{2,5})?\/cxapi/.+$ requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/jd.js
+精东无限购买 = type=http-response,pattern=http-response ^https?:\/\/.+\.((.*woailuojingdong.*)|(.*dayuxiangqian.*))\.(com|cn)(:\d{2,5})?\/cxapi/.+$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/jd.js
 
 # > 香蕉视频去广告
 http-response https?:\/\/.*\.*apps\.com\/(ucp\/index|getGlobalData|.+\/reqplay\/) requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Gx3dong/Surge/master/JS/xjsp.js
