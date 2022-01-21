@@ -1,40 +1,105 @@
 #!name=Ad-vip Module
 #!desc=Ad-vip 模块配置
+#!system=ios
 
+# 分割线——————————————————————————
+
+[Rule]
+# > boxjs代理
+DOMAIN,boxjs.net,𝙋𝙍𝙊𝙓𝙔
+
+
+# 分割线——————————————————————————
 
 [Header Rewrite]
 # > 香蕉视频会员
-https:\/\/.*\.*apps\.com header-replace Cookie xxx_api_auth=3637333161613233666630323063366161303730623161333863313531333864
+https:\/\/.*\.*apps.com header-replace Cookie xxx_api_auth=3363356266346536366237646536646538333833383139313237333735613665
 
+
+# 分割线——————————————————————————
 
 [Script]
-
-# 扫描全能王 pro
-http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js
-
-#酷我音乐vip
-http-response ^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js
-http-request ^https?:\/\/musicpay\.kuwo.cn\/music\.pay\?uid=\d+ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/KuWoMusicDownload.js
-
-#黄瓜视频单独破解付费
-http-response https:\/\/api1000\.gdqeb\.club\/mov\/browse2 requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/JungegeCN/JGG/master/hgsp.js
-
-#樊登读书VIP
-http-request https:\/\/.*\.dushu\.io\/* requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Gx3dong/Surge/master/JS/fddsh.js
+# > 精东无限购买- (*.woailuojingdong.com,*.dayuxiangqian.com)
+http-response ^https?:\/\/.+\.((.*woailuojingdong.*)|(.*dayuxiangqian.*))\.(com|cn)(:\d{2,5})?\/cxapi/.+$ requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/jd.js
 
 # > 香蕉视频去广告
 http-response https?:\/\/.*\.*apps\.com\/(ucp\/index|getGlobalData|.+\/reqplay\/) requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Gx3dong/Surge/master/JS/xjsp.js
 
-#解锁白描黄金会员
-http-response ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wubulaba/surgescript/master/Script/Baimiao.js,script-update-interval=0
+# > 鲨鱼记账<破解Vip附带”真实剩余天数”>
+http-response https:\/\/api\.shayujizhang\.com\/account\/grant\/detail\/info requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Gx3dong/Surge/master/JS/shyjzh.js
 
-#百度网盘解锁vip   pan.baidu.com
-http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
-#百度云倍速播放
-http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
+# > 奈飞评分
+奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+单集评分 = type=http-response,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/warmer/.+type=show-ath,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js
 
-#哔哩哔哩, 港澳台番剧自动切换地区 & 显示豆瓣评分
-Bili Region = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+# > 金山WPS vip
+办公解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,type=http-response,pattern=^https://account.wps.*/api/users/
+
+# > 扫描全能王 pro
+扫描全能 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
+
+# > Boxjs（稳定版+测试版）
+会话数据 = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
+会话数据 = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
+
+# > 彩云天气_SVIP
+彩云天气 = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
+
+# > TFDOWN
+测试商店 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*/builds/\d*/install,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
+
+# > bilbii换区、评分
+哔哩换区 = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/v\d\/app\/season|x\/v\d\/search\/defaultwords)\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+哔哩搜索 = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+
+# > Endel解锁 https://raw.githubusercontent.com/cpphut/surge_module/main/endel.sgmodule
+白噪解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/cpphut/scripts/main/js/endel.js,type=http-response,pattern=^https?:\/\/api-production.endel.io\/v3\/call
+
+# > 百度云盘 解锁
+百度云盘 = type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js,script-update-interval=0
+
+# > MIX解锁
+滤镜解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/mix.js,type=http-response,pattern= ^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$
+
+# > vsco解锁
+滤镜破解 = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js,script-update-interval=0
+
+# > Grow解锁
+运动解锁 = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/revenuecat.js,script-update-interval=-1
+
+# > 百度跳转
+百度跳转 = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
+
+# > 泼辣修图
+泼辣修图 = type=http-response,pattern=^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
+
+# > 空气质量
+iOS14美标空气质量 = type=http-response,pattern=^https:\/\/weather-data\.apple\.com\/v1\/weather\/[\w-]+\/-?[0-9]+\.[0-9]+\/-?[0-9]+\.[0-9]+\?,requires-body=true,script-path=https://raw.githubusercontent.com/Hackl0us/SS-Rule-Snippet/master/Scripts/Surge/weather_aqi_us/iOS14_Weather_AQI_US.js
+
+# > 私有仓库
+私有仓库 = type=http-request, requires-body=0, pattern=^https?:\/\/(raw|gist)\.githubusercontent.com, script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js
+
+# > 订阅管理
+订阅管理 = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
+
+# > 模块订阅(单独添加)
+//爬虫复写去广告 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Advertising/Advertising.sgmodule
+//什么值得买去广告 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.sgmodule
+//贴吧去除广告https://raw.githubusercontent.com/app2smile/rules/master/module/tieba.sgmodule
+//spotify解锁https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.module
+//哔哩哔哩去广告https://raw.githubusercontent.com/app2smile/rules/master/module/bilibili.sgmodule
+//Siri区域解锁https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Siri_Suggestions.sgmodule
+//京东辅助登陆https://raw.githubusercontent.com/Fokit/Quantumult-X/main/rewrite/jd_login_help2.sgmodule
+//京东助手(注入式需key）https://raw.githubusercontent.com/githubdulong/Script/master/jdHelper.sgmodule
+//京东联盟转链（联盟、助手二选一）https://raw.githubusercontent.com/githubdulong/Script/master/Surge/jdapp_to_union.sgmodule
+//浏览器搜索https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Q-Search_All_in_one.sgmodule
+//知乎去广告https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.sgmodule
+//京东半自动销卡https://raw.githubusercontent.com/githubdulong/Script/master/Jd_unbindCard.sgmodule
+//京东淘宝比价https://raw.githubusercontent.com/githubdulong/Script/master/jd_price2.sgmodule
+
+# 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% ap*.intsig.net, vip1.kuwo.cn, api1000.gdqeb.club, *.dushu.io, api.m.jd.com, *.*apps.com, baimiao.uzero.cn, pan.baidu.com, ap?.bilibili.com
+hostname =*.woailuojingdong.com,*.dayuxiangqian.com, *.*apps.com, api.shayujizhang.com, account.wps.cn, ap*.intsig.net, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, weather-data.apple.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store
+
