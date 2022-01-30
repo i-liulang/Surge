@@ -36,7 +36,7 @@ TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubuserc
 
 #机场信息
 #必须修改的字段:你encode后的机场订阅链接
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=https%3A%2F%2Fservice-p156la04-1303094187.gz.apigw.tencentcs.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D70a3d824b2b876683871e9a0ce50c9bb&reset_day=1&title=Flyint&icon=opticaldisc&color=#5AC8FA
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=https%3A%2F%2Fservice-p156la04-1303094187.gz.apigw.tencentcs.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D2cf6171dfca2f592fae611606884b3e3&reset_day=1&title=Flyint&icon=opticaldisc&color=#5AC8FA
 
 #netflix策略组控制
 #必须更改的字段 netflixGroup 填写你Netflix策略组名称
