@@ -15,9 +15,6 @@ URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/
 DOMAIN, iyes.youku.com,REJECT
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 
-#  > 京东 去广告
-URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
-
 #  > 京东极速版 去广告
 URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT-TINYGIF
 
@@ -46,9 +43,6 @@ DOMAIN,vv.video.qq.com,𝘿𝙄𝙍𝙀𝘾𝙏
 人人视频 = requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv\/ad\/getAll
 人人视频 = requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail
 
-# > 嘀嗒出行 capis.didapinche.com,capis*.didapinche.com,
-嘀嗒出行_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
-
 # > Adguard Pro *api.adguard.com
 Adguard = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.com\/api\/.+\/ios_validate_receipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/adguard.js,script-update-interval=-1
 
@@ -70,4 +64,4 @@ http-response ^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ requi
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% api.rr.tv, capis.didapinche.com, capis*.didapinche.com, *api.adguard.com, musicpay.kuwo.cn, vip1.kuwo.cn, greasyfork.org, buy.itunes.apple.com, tagit.hyhuo.com
+hostname = %APPEND% api.rr.tv, *api.adguard.com, musicpay.kuwo.cn, vip1.kuwo.cn, greasyfork.org, buy.itunes.apple.com, tagit.hyhuo.com
