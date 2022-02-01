@@ -23,13 +23,13 @@ URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT
 URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture ,REJECT-TINYGIF
 
 # > 京东库代理
-DOMAIN-SUFFIX,jdsharedresourcescdn.azureedge.net,𝙋𝙍𝙊𝙓𝙔
+DOMAIN-SUFFIX,jdsharedresourcescdn.azureedge.net,𝗣𝗥𝗢𝗫𝗬
 
 # > dayone
-URL-REGEX,^https:\/\/dayone\.me,𝙋𝙍𝙊𝙓𝙔
+URL-REGEX,^https:\/\/dayone\.me,𝗣𝗥𝗢𝗫𝗬
 
 # > 腾讯视频直连
-DOMAIN,vv.video.qq.com,𝘿𝙄𝙍𝙀𝘾𝙏
+DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 
 # 分割线——————————————————————————
