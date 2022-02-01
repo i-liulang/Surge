@@ -6,7 +6,7 @@
 
 [Rule]
 # > boxjs代理
-DOMAIN,boxjs.net,𝙋𝙍𝙊𝙓𝙔
+DOMAIN,boxjs.net,𝗣𝗥𝗢𝗫𝗬
 
 # > ONE无限制去除所有广告 app.ap.d3yuiw4.com,
 URL-REGEX,^http:\/\/app\.api\.d3yuiw4\.com\/api\/app\/ad\/.+,REJECT-TINYGIF
