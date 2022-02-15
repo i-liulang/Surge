@@ -5,6 +5,10 @@
 # 分割线——————————————————————————
 
 [Rule]
+# > 人人视频 去广告
+AND,((USER-AGENT,PUClient*), (NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
+URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
+
 # > boxjs代理
 DOMAIN,boxjs.net,𝗣𝗥𝗢𝗫𝗬
 
@@ -24,6 +28,23 @@ https:\/\/.*\.*apps.com header-replace Cookie xxx_api_auth=336335626634653636623
 # 分割线——————————————————————————
 
 [Script]
+# ～ ⑧ RRTV_去除首頁廣告@ddgksf2013
+http-response https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+# ～ ⑦ RRTV_去除廣場tab@ddgksf2013
+http-response ^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+# ～ ⑥ RRTV_去除商城廣告@ddgksf2013
+http-response ^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+# ～ ⑤ RRTV_Ad_List@ddgksf2013
+http-response ^https:\/\/api\.rr\.tv\/user\/privilege\/list requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+# ～ ④ RRTV_Ad_All@ddgksf2013
+http-response ^https:\/\/api\.rr\.tv\/ad\/getAll requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+# ～ ③ RRTV_Get_Drama@ddgksf2013
+http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+# ～ ② RRTV_Watch_V4@ddgksf2013
+http-response https://api.rr.tv/watch/v4 requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+# ～ ① RRTV_User_Info@ddgksf2013
+http-response https://api.rr.tv/user/profile requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+
 # > EMBY  mb3admin.com,
 http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zwf234/rules/master/js/Emby.js
 
@@ -116,5 +137,5 @@ iOS15美标空气质量 = type=http-response,pattern=^https:\/\/weather-data\.ap
 # 分割线——————————————————————————
 
 [MITM]
-hostname = mb3admin.com, app.weilaixushi.com, api.orientlion.com, app.qdjdswkj.com, api.0954auto.com, app.ap.d3yuiw4.com, mp.weixin.qq.com, *.woailuojingdong.com,*.dayuxiangqian.com, *.*apps.com, api.shayujizhang.com, account.wps.cn, ap*.intsig.net, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, weather-data.apple.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store
+hostname = api.rr.tv, mb3admin.com, app.weilaixushi.com, api.orientlion.com, app.qdjdswkj.com, api.0954auto.com, app.ap.d3yuiw4.com, mp.weixin.qq.com, *.woailuojingdong.com,*.dayuxiangqian.com, *.*apps.com, api.shayujizhang.com, account.wps.cn, ap*.intsig.net, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, weather-data.apple.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store
 
