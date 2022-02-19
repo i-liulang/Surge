@@ -28,7 +28,7 @@ https:\/\/.*\.*apps.com header-replace Cookie xxx_api_auth=336335626634653636623
 
 [URL Rewrite]
 #Tencent WeChat开屏广告
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad) ,reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad) ,reject-200
 ^https://mp\.weixin\.qq\.com/(s|mp/(getappmsgext|profile|author|homepage|lifedetail|videoplayer|app)) ,reject
 
 [Script]
