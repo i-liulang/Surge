@@ -24,8 +24,12 @@ URL-REGEX,^https?:\/\/.*\/common\/splash_config ,REJECT-TINYGIF
 # > 香蕉视频会员
 https:\/\/.*\.*apps.com header-replace Cookie xxx_api_auth=3363356266346536366237646536646538333833383139313237333735613665
 
-
 # 分割线——————————————————————————
+
+[URL Rewrite]
+#Tencent WeChat开屏广告
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad) ,reject
+^https://mp\.weixin\.qq\.com/(s|mp/(getappmsgext|profile|author|homepage|lifedetail|videoplayer|app)) ,reject
 
 [Script]
 # ～ ⑧ RRTV_去除首頁廣告@ddgksf2013
