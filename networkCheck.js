@@ -28,7 +28,7 @@ const carrierNames = loadCarrierNames();
 if (!v4.primaryAddress && !v6.primaryAddress) {
   $done({
     title: '沒有网络',
-    content: '尚未连接网际网络\n请检查网际网络状态后重试',
+    content: '尚未连接网络\n请检查网络状态后重试',
     icon: 'wifi.exclamationmark',
     'icon-color': '#CB1B45',
   });
