@@ -127,11 +127,11 @@
 
 # > 搜索引擎
 # bd: 百度
-^https:\/\/duckduckgo.com\/\?q=gg\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
 # bi: 必应
 ^https:\/\/duckduckgo.com\/\?q=bi\+([^&]+).+ https://cn.bing.com/search?q=$1 302
 # es: Ecosia
-^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.ecosia.org/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=es\+([^&]+).+ https://www.ecosia.org/search?q=$1 302
 # ddg: DuckDuckGo 
 ^https:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
 # 无指令: 谷歌
