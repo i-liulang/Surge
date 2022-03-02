@@ -29,6 +29,7 @@ https:\/\/.*\.*apps.com header-replace Cookie xxx_api_auth=336335626634653636623
 [URL Rewrite]
 
 # > KFC去开屏广告  res.kfc.com,
+^https?:\/\/res\.kfc\.com\.cn\/advertisement\/ reject-img
 ^https:\/\/res\.kfc\.com\.cn/CRM/kfcad/pop/ reject
 
 [Script]
