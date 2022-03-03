@@ -1,0 +1,33 @@
+#!name=网页使用优化
+#!desc=部分网站使用优化
+#!system=ios
+
+[Rule]
+# > 屏蔽知乎网页版强制登陆弹窗（by HotKids）
+URL-REGEX,^https?:\/\/static\.zhihu\.com\/[^\/]+\/(main|column)\.signflow\.[^.]+.js,REJECT
+
+[URL Rewrite]
+
+# > 去掉知乎跳转第三方网站的中间页面  oia.zhihu.com, link.zhihu.com,
+^https?:\/\/link\.zhihu\.com/\?target=(https?)%3A//(.*) $1://$2 307 
+# > 不跳转应用商店
+^https:\/\/oia\.zhihu\.com\/answers\/([0-9]+)\?.* https://www.zhihu.com/answer/$1 307 
+^https:\/\/oia\.zhihu\.com\/articles\/([0-9]+)\?.* https://zhuanlan.zhihu.com/p/$1 307
+
+[Header Rewrite]
+# > 百度贴吧重定向（by HotKids）
+^https?+:\/\/(?:c\.)?+tieba\.baidu\.com\/(?>f|p) header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
+^https?+:\/\/jump2\.bdimg\.com\/(?>f|p) header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
+# > 百度知道重定向（by HotKids）
+^https?+:\/\/zhidao\.baidu\.com header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
+# > 知乎网页重定向（by HotKids）
+^https?+:\/\/www\.zhihu\.com\/question header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
+
+[Script]
+
+# > 知乎再注入 CSS 进行优化
+http-response ^https:\/\/www\.zhihu\.com\/question requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js
+http-response ^https:\/\/www\.zhihu\.com\/topic requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js
+
+[MITM]
+hostname = %INSERT% static.zhihu.com, oia.zhihu.com, link.zhihu.com, zhidao.baidu.com, jump2.bdimg.com
