@@ -33,7 +33,7 @@ https:\/\/.*\.*apps.com header-replace Cookie xxx_api_auth=336335626634653636623
 
 # 人人视频
 # ～ ⑧ RRTV_去除首頁廣告@ddgksf2013
-#http-response https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+http-response https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
 # ～ ⑦ RRTV_去除廣場tab@ddgksf2013
 #http-response ^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
 # ～ ⑥ RRTV_去除商城廣告@ddgksf2013
