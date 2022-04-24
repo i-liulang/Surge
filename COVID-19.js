@@ -1,4 +1,4 @@
-var list = ["中国","上海","邯郸","泉州"];
+var list = ["无锡","邯郸","上海"];
 const url = "https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5";
 var ala="";
 var num1="";
@@ -29,7 +29,7 @@ $httpClient.get(url, function(error, response, data){
     if (i == list.length - 1) {
      $done({
        title: "COVID-19",
-       icon:"facemask.fill",
+       icon:"heart.text.square",
        "icon-color":"#E94335",
        content: ala.replace(/\n$/, "").replace("确诊0例", "无").replace("无症状0例", "无").replace("无，无", "无")
      });
