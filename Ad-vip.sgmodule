@@ -118,10 +118,6 @@ http-response https:\/\/api\.shayujizhang\.com\/account\/grant\/detail\/info req
 # > 泼辣修图
 泼辣修图 = type=http-response,pattern=^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
 
-# > 空气质量
-iOS14美标空气质量 = type=http-response,pattern=^https:\/\/weather-data\.apple\.com\/v1\/weather\/[\w-]+\/-?[0-9]+\.[0-9]+\/-?[0-9]+\.[0-9]+\?,requires-body=true,script-path=https://raw.githubusercontent.com/Hackl0us/SS-Rule-Snippet/master/Scripts/Surge/weather_aqi_us/iOS14_Weather_AQI_US.js
-iOS15美标空气质量 = type=http-response,pattern=^https:\/\/weather-data\.apple\.com\/v2\/weather\/[\w-]+\/-?[0-9]+\.[0-9]+\/-?[0-9]+\.[0-9]+\?,requires-body=true,script-path=https://raw.githubusercontent.com/Hackl0us/SS-Rule-Snippet/master/Scripts/Surge/weather_aqi_us/iOS15_Weather_AQI_US.js
-
 # > 私有仓库
 私有仓库 = type=http-request, requires-body=0, pattern=^https?:\/\/(raw|gist)\.githubusercontent.com, script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js
 
@@ -146,5 +142,5 @@ iOS15美标空气质量 = type=http-response,pattern=^https:\/\/weather-data\.ap
 # 分割线——————————————————————————
 
 [MITM]
-hostname = api.rr.tv, res.kfc.com, mb3admin.com, *.emby.wtf:0, *.plusmedia.site:0, *.jmsooo.com:0, app.weilaixushi.com, api.orientlion.com, app.qdjdswkj.com, api.0954auto.com, appapi.xmblgg.com, app.ap.d3yuiw4.com, mp.weixin.qq.com, *.woailuojingdong.com,*.dayuxiangqian.com, *.*apps.com, api.shayujizhang.com, account.wps.cn, ap*.intsig.net, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, weather-data.apple.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store
+hostname = api.rr.tv, res.kfc.com, mb3admin.com, *.emby.wtf:0, *.plusmedia.site:0, *.jmsooo.com:0, app.weilaixushi.com, api.orientlion.com, app.qdjdswkj.com, api.0954auto.com, appapi.xmblgg.com, app.ap.d3yuiw4.com, mp.weixin.qq.com, *.woailuojingdong.com,*.dayuxiangqian.com, *.*apps.com, api.shayujizhang.com, account.wps.cn, ap*.intsig.net, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store
 
