@@ -20,7 +20,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
   ;(async () => {
     let panel_result = {
-      title: '流媒体解锁检测',
+      title: '𝗦𝗧𝗥𝗘𝗔𝗠𝗜𝗡𝗚 𝗨𝗡𝗟𝗢𝗖𝗞 𝗖𝗛𝗘𝗖𝗞',
       content: '',
       icon: '4k.tv',
       'icon-color': '#008080',
