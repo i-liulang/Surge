@@ -29,6 +29,8 @@ https:\/\/.*\.*apps.com header-replace Cookie xxx_api_auth=336335626634653636623
 ^https?:\/\/res\.kfc\.com\.cn\/advertisement\/ reject-img
 ^https:\/\/res\.kfc\.com\.cn/CRM/kfcad/pop/ reject
 
+ # ～ RRTV_屏蔽软件更新
+^https?:\/\/api\.rr\.tv\/.*?Version  reject  
 [Script]
 
 # 人人视频
