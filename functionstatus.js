@@ -1,4 +1,7 @@
-//代码借鉴 https://raw.githubusercontent.com/chaizia/Profiles/master/MySurge/surgepro_flushdns.js
+/*
+https://raw.githubusercontent.com/chaizia/Profiles/master/MySurge/surgepro_flushdns.js
+by:@moioooo
+*/
 !(async () => {
 let traffic = (await httpAPI("/v1/traffic","GET"));
 let dateNow = new Date();
@@ -19,14 +22,14 @@ $done({
     title:"𝗦𝗨𝗥𝗚𝗘 𝗣𝗥𝗢 已运行"+startTime,
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"x.circle",
-   "icon-color":icon_s?"#f6c970":"#FFB61E"
+   "icon-color":icon_s?"#F6C970":"#FF2121"
 });
 })();
 function icon_status(status){
   if (status){
     return "\u2611";
   } else {
-      return "\u2757"
+      return "\u2612"
     }
 }
 function timeTransform(dateNow,dateTime) {
