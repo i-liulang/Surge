@@ -21,7 +21,7 @@ if ($trigger == "button") {
 $done({
     title:"𝗦𝗨𝗥𝗚𝗘 𝗣𝗥𝗢 已运行"+startTime,
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
-    icon: icon_s?"crown.fill":"x.circle",
+    icon: icon_s?"crown.fill":"exclamationmark.circle",
    "icon-color":icon_s?"#F6C970":"#FF2121"
 });
 })();
