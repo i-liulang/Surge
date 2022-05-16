@@ -10,6 +10,8 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
 # BiliBili 小卡片广告
 URL-REGEX,^https://api.bilibili.com/pgc/season/player/cards,REJECT
+# BiliBili_Defaultword
+URL-REGEX,^https://app.bilibili.com/x/v2/search/defaultwords,REJECT
 
 [URL Rewrite]
 # 去除搜索中的大家都在搜
