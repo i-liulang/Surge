@@ -19,7 +19,7 @@ function num(location, result) {
     num22=num2.replace(/\s/g, "");
     ala = ala +loc +":  确诊"+num11.padStart(num11.length,"\u0020")+"例, 无症状"+num22.padStart(num22.length,"\u0020")+ "例\n";
   } else {
-    ala = ala + loc + ":  动态清零\n";
+    ala = ala + loc + ":  无数据\n";
   }
 };
 $httpClient.get(url, function(error, response, data){
