@@ -28,6 +28,7 @@ URL-REGEX,^https://app.bilibili.com/x/v2/search/defaultwords,REJECT
 
 
 [Script]
+BiliBili_启动时开启直连模式 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.bilibili\.com\/x\/offline\/version,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_startup_direct.js
 BiliBili_繁体CC字幕转简体 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_cc.js
 BiliBili_去除统一观影页面广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_diy.js
 BiliBili_去除统一设置的皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_diy.js
