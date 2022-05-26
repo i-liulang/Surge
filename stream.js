@@ -274,7 +274,7 @@ panel_result['content'] = content
                 location: { countryCode },
               },
             } = data?.extensions?.sdk
-            
+            countryCode==(countryCode=="TW")?"CN":countryCode 
             resolve({ inSupportedLocation, countryCode, accessToken })
           })
         })
