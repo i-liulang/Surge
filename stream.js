@@ -279,7 +279,7 @@ panel_result['content'] = content
           })
         })
       }
-      countryCode=(countryCode=="TW")?"CN":countryCode
+      
       function testHomePage() {
         return new Promise((resolve, reject) => {
           let opts = {
