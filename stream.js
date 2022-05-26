@@ -273,8 +273,7 @@ panel_result['content'] = content
                 inSupportedLocation,
                 location: { countryCode },
               },
-            } = data?.extensions?.sdk
-            countryCode=(countryCode=="TW")?"CN":countryCode 
+            } = data?.extensions?.sdk  
             resolve({ inSupportedLocation, countryCode, accessToken })
           })
         })
