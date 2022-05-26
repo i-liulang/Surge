@@ -15,27 +15,12 @@ const STATUS_TIMEOUT = -1
 // 检测异常
 const STATUS_ERROR = -2
 
-function getFlagEmoji(code) {
-  const codePoints = code
-     .toUpperCase()
-    .split('')
-    .map((char) => 127397 + char.charCodeAt());
-  return String.fromCodePoint(...codePoints);
-}
-function getFlagEmoji(region) {
-  const codePoints = region
-     .toUpperCase()
-    .split('')
-    .map((char) => 127397 + char.charCodeAt());
-  return String.fromCodePoint(...codePoints);
-}
-
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36'
 
 
   ;(async () => {
     let panel_result = {
-      title: '𝗦𝗧𝗥𝗘𝗔𝗠𝗜𝗡𝗚 𝗖𝗛𝗘𝗖𝗞 ',
+      title: '𝗦𝗧𝗥𝗘𝗔𝗠𝗜𝗡𝗚 𝗖𝗛𝗘𝗖𝗞',
       content: '',
       icon: '4k.tv',
       'icon-color': '#008080',
@@ -108,13 +93,13 @@ panel_result['content'] = content
     await inner_check()
       .then((code) => {
         if (code === 'Not Available') {
-          youtube_check_result += '不支持解锁🚫'
+          youtube_check_result += '不支持解锁 🚫'
         } else {
-          youtube_check_result += '已解锁 ➠ ' +`${getFlagEmoji(code)} ` 
+          youtube_check_result += '已解锁 ➠ ' +`${getFlagEmoji(code)} `
         }
       })
       .catch((error) => {
-        youtube_check_result += '检测失败，请刷新面板🔄'
+        youtube_check_result += '检测失败，请刷新面板 🔄'
       })
   
     return youtube_check_result
@@ -166,7 +151,7 @@ panel_result['content'] = content
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += '已完整解锁 ➠ '  +`${getFlagEmoji(code)} ` 
+        netflix_check_result += '已完整解锁 ➠ '  +`${getFlagEmoji(code)} `
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
@@ -174,7 +159,7 @@ panel_result['content'] = content
           return Promise.reject('Not Available')
         }
   
-        netflix_check_result += '仅自制剧 ➠ ' + `${getFlagEmoji(code)} ` 
+        netflix_check_result += '仅解锁自制剧 ➠ '  +`${getFlagEmoji(code)} `
         return Promise.reject('BreakSignal')
       })
       .catch((error) => {
@@ -182,10 +167,10 @@ panel_result['content'] = content
           return
         }
         if (error === 'Not Available') {
-          netflix_check_result += '该节点不支持解锁🚫'
+          netflix_check_result += '该节点不支持解锁 🚫'
           return
         }
-        netflix_check_result += '检测失败，请刷新面板🔄'
+        netflix_check_result += '检测失败，请刷新面板 🔄'
       })
   
     return netflix_check_result
