@@ -274,11 +274,12 @@ panel_result['content'] = content
                 location: { countryCode },
               },
             } = data?.extensions?.sdk
+            
             resolve({ inSupportedLocation, countryCode, accessToken })
           })
         })
       }
-      
+      countryCode=(countryCode=="TW")?"CN":countryCode
       function testHomePage() {
         return new Promise((resolve, reject) => {
           let opts = {
