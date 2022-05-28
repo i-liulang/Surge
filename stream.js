@@ -27,7 +27,7 @@ function getFlagEmoji(code) {
 function getFlagEmoji(region) {
   //转换tw为cn，避免国行获取不到emoj
   let region_change =(region=="TW"||region=="tw")?"CN":region;
-  const codePoints = region_change
+  const codePoints = region
      .toUpperCase()
     .split('')
     .map((char) => 127397 + char.charCodeAt());
@@ -51,11 +51,11 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 即将登陆~"+code.toUpperCase()
+        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 即将登陆~"+region.toUpperCase()
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 已解锁 ➠ " +`${getFlagEmoji(region)} ` + code.toUpperCase()
+        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 已解锁 ➠ " +`${getFlagEmoji(region)} ` + region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
