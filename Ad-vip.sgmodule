@@ -67,7 +67,7 @@ http-response https://api.rr.tv/user/profile requires-body=1,max-size=0,script-p
 http-response ^https?:\/\/ap\w{1,4}\.(weilaixushi|orientlion|qdjdswkj|0954auto|xmblgg)\.com\/m_user\/info requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/91SPCrack.js
 
 # > 微信 去除公众号文章底部广告  mp.weixin.qq.com
-http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+#http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
 # > 精东无限购买- (*.woailuojingdong.com,*.dayuxiangqian.com)
 http-response ^http[s]?:\/\/.+\.((.*woailuojingdong.*)|(.*dayuxiangqian.*))\.(com|cn)(:\d{2,5})?\/cxapi/.+$ requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/jd.js
