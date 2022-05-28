@@ -15,6 +15,25 @@ const STATUS_TIMEOUT = -1
 // 检测异常
 const STATUS_ERROR = -2
 
+function getFlagEmoji(code) {
+  //转换tw为cn，避免国行获取不到emoj
+  let code_change =(code=="TW"||code=="tw")?"CN":code;
+  const codePoints = code
+     .toUpperCase()
+    .split('')
+    .map((char) => 127397 + char.charCodeAt());
+  return String.fromCodePoint(...codePoints);
+}
+function getFlagEmoji(region) {
+  //转换tw为cn，避免国行获取不到emoj
+  let region_change =(region=="TW"||region=="tw")?"CN":region;
+  const codePoints = region
+     .toUpperCase()
+    .split('')
+    .map((char) => 127397 + char.charCodeAt());
+  return String.fromCodePoint(...codePoints);
+}
+
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36'
 
 
@@ -22,8 +41,8 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
     let panel_result = {
       title: '𝗦𝗧𝗥𝗘𝗔𝗠𝗜𝗡𝗚 𝗖𝗛𝗘𝗖𝗞',
       content: '',
-      icon: '4k.tv',
-      'icon-color': '#008080',
+      icon: '4k.tv.fill',
+      'icon-color': '#FF2D55',
     }
   let [{ region, status }] = await Promise.all([testDisneyPlus()])
     await Promise.all([check_youtube_premium(),check_netflix()])
@@ -32,17 +51,17 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 即将登陆 ➟ 区域 " + code.toUpperCase()
+        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 即将登陆~"+region.toUpperCase()
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 已解锁 ➟ 区域 " + code.toUpperCase()
+        disney_result="𝒟𝒾𝓈𝓃𝑒𝒴*: 已解锁 ➠ " +`${getFlagEmoji(region)} ` + region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 未支持 🚫 "
+        disney_result="𝒟𝒾𝓈𝓃𝑒𝒴*: 没有支持 🚫 "
       } else if (status==STATUS_TIMEOUT) {
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 检测超时 🚦"
+        disney_result="𝒟𝒾𝓈𝓃𝑒𝒴*: 检测超时 🚦"
       }
 result.push(disney_result)
 console.log(result)
@@ -93,13 +112,13 @@ panel_result['content'] = content
     await inner_check()
       .then((code) => {
         if (code === 'Not Available') {
-          youtube_check_result += '不支持解锁'
+          youtube_check_result += '不支持解锁🚫'
         } else {
-          youtube_check_result += '已解锁 ➟ 区域 ' + code.toUpperCase()
+          youtube_check_result += '已解锁 ➠ ' +`${getFlagEmoji(code)} `+ code.toUpperCase()
         }
       })
       .catch((error) => {
-        youtube_check_result += '检测失败，请刷新面板'
+        youtube_check_result += '检测失败，请刷新面板🔄'
       })
   
     return youtube_check_result
@@ -151,7 +170,7 @@ panel_result['content'] = content
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += '已完整解锁 ➟ 区域 ' + code.toUpperCase()
+        netflix_check_result += '已完整解锁 ➠ '  +`${getFlagEmoji(code)} ` + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
@@ -159,7 +178,7 @@ panel_result['content'] = content
           return Promise.reject('Not Available')
         }
   
-        netflix_check_result += '仅解锁自制剧 ➟ 区域 ' + code.toUpperCase()
+        netflix_check_result += '仅解锁自制剧 ➠ ' + `${getFlagEmoji(code)} ` + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .catch((error) => {
@@ -167,10 +186,10 @@ panel_result['content'] = content
           return
         }
         if (error === 'Not Available') {
-          netflix_check_result += '该节点不支持解锁'
+          netflix_check_result += '该节点不支持解锁🚫'
           return
         }
-        netflix_check_result += '检测失败，请刷新面板'
+        netflix_check_result += '检测失败，请刷新面板🔄'
       })
   
     return netflix_check_result
@@ -274,6 +293,8 @@ panel_result['content'] = content
                 location: { countryCode },
               },
             } = data?.extensions?.sdk
+            //如果是台湾地区，则将TW转换为CN，避免国行手机获取不到emoj
+            countryCode=(countryCode=="TW")?"CN":countryCode
             resolve({ inSupportedLocation, countryCode, accessToken })
           })
         })
