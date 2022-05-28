@@ -32,11 +32,11 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 即将登陆 ➟ 区域 ' + code.toUpperCase()
+        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 即将登陆 ➟ 区域 " + code.toUpperCase()
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 已解锁 ➟ 区域 ' + code.toUpperCase()
+        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 已解锁 ➟ 区域 " + code.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
