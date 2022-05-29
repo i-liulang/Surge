@@ -27,7 +27,7 @@ function getFlagEmoji(code) {
 function getFlagEmoji(region) {
   //转换tw为cn，避免国行获取不到emoj
   let region_change =(region=="TW"||region=="tw")?"CN":region;
-  const codePoints = region
+  const codePoints = region_change
      .toUpperCase()
     .split('')
     .map((char) => 127397 + char.charCodeAt());
@@ -294,7 +294,7 @@ panel_result['content'] = content
               },
             } = data?.extensions?.sdk
             //如果是台湾地区，则将TW转换为CN，避免国行手机获取不到emoj
-            countryCode=(countryCode=="TW")?"CN":countryCode
+            //countryCode=(countryCode=="TW")?"CN":countryCode
             resolve({ inSupportedLocation, countryCode, accessToken })
           })
         })
