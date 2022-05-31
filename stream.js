@@ -51,17 +51,17 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 即将登陆~"+region.toUpperCase()
+        disney_result="𝗗𝗶𝘀𝗻𝗲𝘆+: 即将登陆~"+region.toUpperCase()
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 已解锁 ➠ " +`${getFlagEmoji(region)} ` + region.toUpperCase()
+        disney_result="𝗗𝗶𝘀𝗻𝗲𝘆+: 已解锁 ➠ " +`${getFlagEmoji(region)} ` + region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 没有支持 🚫 "
+        disney_result="𝗗𝗶𝘀𝗻𝗲𝘆+: 没有支持 🚫 "
       } else if (status==STATUS_TIMEOUT) {
-        disney_result="𝗗𝗜𝗦𝗡𝗘𝗬+: 检测超时 🚦"
+        disney_result="𝗗𝗶𝘀𝗻𝗲𝘆+: 检测超时 🚦"
       }
 result.push(disney_result)
 console.log(result)
@@ -107,7 +107,7 @@ panel_result['content'] = content
       })
     }
   
-    let youtube_check_result = '𝗬𝗢𝗨𝗧𝗨𝗕𝗘: '
+    let youtube_check_result = '𝗬𝗼𝘂𝗧𝘂𝗯𝗲: '
   
     await inner_check()
       .then((code) => {
@@ -163,7 +163,7 @@ panel_result['content'] = content
       })
     }
   
-    let netflix_check_result = '𝗡𝗘𝗧𝗙𝗟𝗜𝗫: '
+    let netflix_check_result = '𝗡𝗲𝘁𝗳𝗹𝗶𝘅: '
   
     await inner_check(81215567)
       .then((code) => {
