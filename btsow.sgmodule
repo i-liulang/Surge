@@ -7,7 +7,7 @@ DOMAIN,www.dmm.co.jp,𝗝𝗮𝗽𝗮𝗻
 ^https:\/\/xiongmao\wo\.xyz\/search\?keyword=.+ header-add Referer https://iknight.icu/
 
 [Script]
-DMM = type=http-request,pattern="^https:\/\/btsow\.(rest|bar)\/(video\/.+|search\/[A-Z]{2,}-{1}[0-9]{2,}C?$)",requires-body=1,max-size=0,control-api=1,script-path=DMM.js
-Bt = type=http-request,pattern=https?://xiongmaobo\.xyz\/detail\/.+,requires-body=1,max-size=0,script-path=Bt.js
+DMM = type=http-request,pattern="^https:\/\/btsow\.(rest|bar)\/(video\/.+|search\/[A-Z]{2,}-{1}[0-9]{2,}C?$)",requires-body=1,max-size=0,control-api=1,script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/DMM.js
+Bt = type=http-request,pattern=https?://xiongmaobo\.xyz\/detail\/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/Bt.js
 [MITM]
 hostname = %APPEND% btsow.bar,btsow.rest,xiongmao?o.xyz
