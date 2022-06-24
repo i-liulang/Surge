@@ -55,13 +55,13 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="𝗗𝗶𝘀𝗻𝗲𝘆✛: 已经解锁 ➠ " +`${getFlagEmoji(region)} ` + region.toUpperCase()
+        disney_result="𝗗𝗶𝘀𝗻𝗲𝘆 ✛: 已经解锁 ➠ " +`${getFlagEmoji(region)} ` + region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
-        disney_result="𝗗𝗶𝘀𝗻𝗲𝘆✛: 没有支持 🚫 "
+        disney_result="𝗗𝗶𝘀𝗻𝗲𝘆 ✛: 没有支持 🚫 "
       } else if (status==STATUS_TIMEOUT) {
-        disney_result="𝗗𝗶𝘀𝗻𝗲𝘆✛: 检测超时 🚦"
+        disney_result="𝗗𝗶𝘀𝗻𝗲𝘆 ✛: 检测超时 🚦"
       }
 result.push(disney_result)
 console.log(result)
