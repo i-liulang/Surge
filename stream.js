@@ -112,7 +112,7 @@ panel_result['content'] = content
     await inner_check()
       .then((code) => {
         if (code === 'Not Available') {
-          youtube_check_result += '不支持解锁🚫'
+          youtube_check_result += '不能解锁🚫'
         } else {
           youtube_check_result += '已经解锁 ➠ ' +`${getFlagEmoji(code)} `+ code.toUpperCase()
         }
@@ -186,7 +186,7 @@ panel_result['content'] = content
           return
         }
         if (error === 'Not Available') {
-          netflix_check_result += '该节点不支持解锁🚫'
+          netflix_check_result += '不能解锁🚫'
           return
         }
         netflix_check_result += '检测失败，请刷新面板🔄'
