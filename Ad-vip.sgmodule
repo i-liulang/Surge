@@ -67,7 +67,7 @@ http-response https://api.rr.tv/user/profile requires-body=1,max-size=0,script-p
 下载文件重命名 = type=http-response,pattern=(\/Videos\/\d+\/stream\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/.+&filename),requires-body=false,max-size=0,script-path=https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/download_file_rename.js,debug=false
 
 # > 91视频解锁会员 app.weilaixushi.com, api.orientlion.com, app.qdjdswkj.com, api.0954auto.com, appapi.xmblgg.com
-^https?:\/\/ap\w{1,4}\.(weilaixushi|orientlion|qdjdswkj|0954auto|xmblgg)\.com\/m_user\/info requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/91SPCrack.js
+91视频 = type=http-request,pattern=^https?:\/\/ap\w{1,4}\.(weilaixushi|orientlion|qdjdswkj|0954auto|xmblgg)\.com\/m_user\/info ,requires-body=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/91SPCrack.js
 
 # > 微信 去除公众号文章底部广告  mp.weixin.qq.com
 #http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
