@@ -43,6 +43,7 @@ DOMAIN,pub3.emby.wtf
 
 # > 流媒体masakaf服务器
 DOMAIN,cf.misakaf.org
+DOMAIN,4837.misakaf.org
 
 # > 流媒体masakaf服务器
 DOMAIN,aaa.ax
@@ -60,4 +61,19 @@ DOMAIN,95.217.228.36
 DOMAIN,cu.poloemby.xyz
 
 # > 流媒体Cc服务器
-DOMAIN,emby.jiasu.ga
+DOMAIN,cc.ccemby.tk
+
+# > 流媒体终点站服务器
+DOMAIN,pub1back.emby.wtf
+DOMAIN,pub2back.emby.wtf
+DOMAIN,pub3back.emby.wtf
+DOMAIN,pub4back.emby.wtf
+DOMAIN,pub1.emby.wtf
+DOMAIN,pub2.emby.wtf
+DOMAIN,pub3.emby.wtf
+DOMAIN,pub4.emby.wtf
+
+# > 流媒体Misty服务器
+DOMAIN,aaa.ax
+DOMAIN,hk.aaa.ax
+
