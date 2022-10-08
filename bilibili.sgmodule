@@ -2,7 +2,6 @@
 #!desc=开屏页广告,推荐页广告,动态(推荐话题和列表广告),视频播放页面(up主推荐广告,相关推荐广告)
 
 [Rule]
-DOMAIN-SUFFIX,cm.bilibili.com,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 # 可能的一些推广(beta)
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
