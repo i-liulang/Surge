@@ -37,21 +37,21 @@ https:\/\/.*\.*apps\.com header-replace Cookie xxx_api_auth=61623435636330376334
 [Script]
 # > 人人视频
 # ～ ⑧ RRTV_去除首頁廣告@ddgksf2013
-http-response https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+http-response https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX requires-body=1,max-size=0,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/rrtv_json.js
 # ～ ⑦ RRTV_去除廣場tab@ddgksf2013
-#http-response ^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+#http-response ^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar requires-body=1,max-size=0,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/rrtv_json.js
 # ～ ⑥ RRTV_去除商城廣告@ddgksf2013
-#http-response ^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+#http-response ^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY requires-body=1,max-size=0,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/rrtv_json.js
 # ～ ⑤ RRTV_Ad_List@ddgksf2013
-http-response ^https:\/\/api\.rr\.tv\/user\/privilege\/list requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+http-response ^https:\/\/api\.rr\.tv\/user\/privilege\/list requires-body=1,max-size=0,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/rrtv_json.js
 # ～ ④ RRTV_Ad_All@ddgksf2013
-http-response ^https:\/\/api\.rr\.tv\/ad\/getAll requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+http-response ^https:\/\/api\.rr\.tv\/ad\/getAll requires-body=1,max-size=0,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/rrtv_json.js
 # ～ ③ RRTV_Get_Drama@ddgksf2013
-http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail requires-body=1,max-size=0,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/rrtv_json.js
 # ～ ② RRTV_Watch_V4@ddgksf2013
-#http-response https://api.rr.tv/watch/v4 requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+#http-response https://api.rr.tv/watch/v4 requires-body=1,max-size=0,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/rrtv_json.js
 # ～ ① RRTV_User_Info@ddgksf2013
-http-response https://api.rr.tv/user/profile requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/rrtv.js
+http-response https://api.rr.tv/user/profile requires-body=1,max-size=0,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/rrtv_json.js
 
 
 # > EMBY  mb3admin.com, *.emby.wtf:0, *.plusmedia.site:0, *.jmsooo.com:0
@@ -104,7 +104,7 @@ http-response https:\/\/api\.shayujizhang\.com\/account\/grant\/detail\/info req
 白噪解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/cpphut/scripts/main/js/endel.js,type=http-response,pattern=^https?:\/\/api-production.endel.io\/v3\/call
 
 # > 百度云盘 解锁
-百度云盘 = type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js,script-update-interval=0
+百度云盘 = type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Crack/bdcloud.js,script-update-interval=0
 
 # > MIX解锁
 滤镜解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/mix.js,type=http-response,pattern= ^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$
