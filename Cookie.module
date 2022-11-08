@@ -35,8 +35,8 @@
 # > 什么值得买 浏览器 https://zhiyou.smzdm.com/
 什么值买 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js,type=http-request,requires-body=false,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$
 
-# > 喜马拉雅 app获取  113.96.156.178, *.ximalaya.com
-喜马拉雅 = script-path=https://raw.githubusercontent.com/githubdulong/Script/master/xmlySign.js,requires-body=0,type=http-request,pattern=^https?:\/\/mobile\.ximalaya\.com\/app-skin-service\/skin\/
+# > 喜马拉雅 app获取（获取不到ck可以尝试切换网络）
+喜马拉雅 = script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,requires-body=0,type=http-request,pattern=^https?:\/\/mobile\.ximalaya\.com\/app-skin-service\/skin\/
 
 [MITM]
 hostname = draw.jdfcloud.com, music.163.com, *.bilibili.com, api.m.jd.com, passport.iqiyi.com, api.weibo.cn, m.weibo.cn, c.tieba.baidu.com, zhiyou.smzdm.com, 113.96.156.178, *.ximalaya.com,
