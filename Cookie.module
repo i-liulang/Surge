@@ -39,4 +39,4 @@
 喜马拉雅 = script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,requires-body=0,type=http-request,pattern=^https?:\/\/mobile\.ximalaya\.com\/app-skin-service\/skin\/
 
 [MITM]
-hostname = draw.jdfcloud.com, music.163.com, *.bilibili.com, api.m.jd.com, passport.iqiyi.com, api.weibo.cn, m.weibo.cn, c.tieba.baidu.com, zhiyou.smzdm.com, 113.96.156.178, *.ximalaya.com,
+hostname = draw.jdfcloud.com, music.163.com, *.bilibili.com, api.m.jd.com, passport.iqiyi.com, api.weibo.cn, m.weibo.cn, c.tieba.baidu.com, zhiyou.smzdm.com, *.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64
