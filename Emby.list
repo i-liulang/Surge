@@ -58,7 +58,10 @@ DOMAIN,20.205.102.200
 DOMAIN,95.217.228.36
 
 # > 流媒体Polo服务器
-DOMAIN,cu.poloemby.xyz
+DOMAIN,df.poloemby.xyz
+DOMAIN,zf.poloemby.xyz
+DOMAIN,zfsg.poloemby.xyz
+DOMAIN,happy.poloemby.xyz
 
 # > 流媒体Cc服务器
 DOMAIN,cc.ccemby.tk
