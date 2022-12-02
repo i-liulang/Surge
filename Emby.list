@@ -77,6 +77,6 @@ DOMAIN,pub3.emby.wtf
 DOMAIN,pub4.emby.wtf
 
 # > 流媒体Misty服务器
-DOMAIN,aaa.ax
-DOMAIN,hk.aaa.ax
+DOMAIN,misty.ltd
+
 
