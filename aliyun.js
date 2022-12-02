@@ -1,4 +1,17 @@
 //阿里云挂载魔改surge版 ，原作者Chosen Ome
+//将阿里云挂载.js脚本放入icloud云 surge文件内
+//打开Fileball 添加Synology协议
+//地址填 aliyun.example.com
+//用户名填 abc
+//密码填 refresh_token（需要用阿里云盘扫描alist的二维码获得）地址如下
+// https://alist-doc.nn.ci/docs/driver/aliyundrive
+// 连接 & Enjoy
+// [General]
+// force-http-engine-hosts = %APPEND% aliyun.example.com:0 // 要开mpv的话必须添加
+
+// [Script]
+// 阿里云挂载 = type=http-request,pattern=^http:\/\/aliyun\.example\.com,requires-body=1,script-path=阿里云挂载.js,max-size=0,debug=1
+
 
 var url = $request.url;
 //console.log(url);
