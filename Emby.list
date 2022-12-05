@@ -79,4 +79,7 @@ DOMAIN,pub4.emby.wtf
 # > 流媒体Misty服务器
 DOMAIN,misty.ltd
 
+# > 流媒体Nebula服务器
+DOMAIN,direct.nebula-emby.com
+
 
