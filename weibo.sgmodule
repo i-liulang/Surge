@@ -19,7 +19,7 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_ti
 
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
 [MITM]
 hostname = %APPEND% api.weibo.cn, mapi.weibo.com, *uve.weibo.com
