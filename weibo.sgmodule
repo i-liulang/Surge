@@ -22,4 +22,4 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
 [MITM]
-hostname = %APPEND% api.weibo.cn, mapi.weibo.com, sdkapp.uve.weibo.com
+hostname = %APPEND% api.weibo.cn, mapi.weibo.com, *uve.weibo.com
