@@ -82,4 +82,6 @@ DOMAIN,misty.ltd
 # > 流媒体Nebula服务器
 DOMAIN,direct.nebula-emby.com
 
+# > 流媒体gfwEmby服务器
+DOMAIN,us-s3.gfwemby.org
 
