@@ -32,6 +32,7 @@ http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/w
 
 http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
+http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
 [MITM]
 hostname = %APPEND% api.weibo.cn, mapi.weibo.com, *.uve.weibo.com
