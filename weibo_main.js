@@ -17,13 +17,13 @@
 [rewrite_local]
   
 # > 微博去广告以及去除各部分推广模块
-^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_main.js
+^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) url script-response-body https://raw.githubusercontent.com/i-liulang/Surge/main/weibo_main.js
 # > 删除微博开屏广告
-^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_main.js
+^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/i-liulang/Surge/main/weibo_main.js
 # > 自定义tab皮肤
-^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_main.js
+^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://raw.githubusercontent.com/i-liulang/Surge/main/weibo_main.js
 # > 非会员设置tab皮肤
-^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_main.js
+^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.githubusercontent.com/i-liulang/Surge/main/weibo_main.js
 [mitm] 
 hostname=api.weibo.cn, mapi.weibo.com, *uve.weibo.com, new.vip.weibo.cn
 ***********************************/
