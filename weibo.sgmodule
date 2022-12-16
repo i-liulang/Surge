@@ -2,6 +2,8 @@
 #!desc=Weibo app removes ad.
 #!system=ios
 
+[Rule]
+DOMAIN, sdkapp.uve.weibo.com, DIRECT
 
 [Script]
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|messageflow) requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
