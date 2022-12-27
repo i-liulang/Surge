@@ -25,6 +25,7 @@ URL-REGEX,^https://app.bilibili.com/x/v2/search/defaultwords,REJECT
 
 
 [Script]
+BiliBili_皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/ap(i|p)\.bilibili\.com\/x\/(vip|v2|resource)\/(space|account|web|price|top_panel_info|show)(\/|\?)(mine|myinfo|access|vip_center|panel|_bridge|skin\?).*,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/BiliBili/biliSkin.js
 BiliBili_屏蔽首页右上角活动 = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,requires-body=1,script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/bilibili_json.js
 BiliBili_去除热搜发现 = type=http-response,pattern=^https://app.bilibili.com/x/v2/search/square,requires-body=1,script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/bilibili_json.js
 BiliBili_去除统一观影页面广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/bilibili_json.js
