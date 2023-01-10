@@ -6,7 +6,7 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 # 可能的一些推广(beta)
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
 # BiliBili漫画去广告
-URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
+URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab),REJECT
 # BiliBili 小卡片广告
 URL-REGEX,^https://api.bilibili.com/pgc/season/player/cards,REJECT
 # BiliBili_Defaultword
