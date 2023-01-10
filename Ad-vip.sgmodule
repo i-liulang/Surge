@@ -53,7 +53,6 @@ http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail requ
 # ～ ① RRTV_User_Info@ddgksf2013
 http-response https://api.rr.tv/user/profile requires-body=1,max-size=0,script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/rrtv_json.js
 
-
 # > EMBY  mb3admin.com, *.emby.wtf:0, *.plusmedia.site:0, *.jmsooo.com:0
 播放解锁 = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/unlock.js,debug=false
 添加外部播放器连接 = type=http-response,pattern=\/Users\/\w{32}\/Items\/\d+\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/emby-plugin.js,debug=false
@@ -76,11 +75,6 @@ http-response https?:\/\/.+\/(ucp\/index|getGlobalData|.+\/reqplay\/) requires-b
 # > 鲨鱼记账<破解Vip附带”真实剩余天数”>
 http-response https:\/\/api\.shayujizhang\.com\/account\/grant\/detail\/info requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Gx3dong/Surge/master/JS/shyjzh.js
 
-# > 奈飞评分
-奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
-奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
-单集评分 = type=http-response,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/warmer/.+type=show-ath,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js
-
 # > 金山WPS vip
 办公解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,type=http-response,pattern=^https://account.wps.*/api/users/
 
@@ -92,9 +86,6 @@ http-response https:\/\/api\.shayujizhang\.com\/account\/grant\/detail\/info req
 
 # > 彩云天气_SVIP
 #彩云天气 = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
-
-# > TFDOWN
-测试商店 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*/builds/\d*/install,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
 
 # > bilbii换区、评分   ap?.bili*i.com, ap?.bili*i.net
 哔哩换区 = type=http-response,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/offline\/version)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
@@ -127,12 +118,12 @@ http-response https:\/\/api\.shayujizhang\.com\/account\/grant\/detail\/info req
 # > 订阅管理
 订阅管理 = type=http-request,pattern=^https?:\/\/sub\.store,script-path=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
 
-# > 京东比价  api.m.jd.com
-http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=1,script-path=https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/jd_price_lite.js, tag=京东比价-弹窗
+# > 京东App 历史价格 
+京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
 
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = api.rr.tv, res.kfc.com, mb3admin.com, *.emby.wtf:0, *.plusmedia.site:0, *.jmsooo.com:0, app.weilaixushi.com, api.orientlion.com, app.qdjdswkj.com, api.0954auto.com, appapi.xmblgg.com, app.ap.d3yuiw4.com, mp.weixin.qq.com, *.woailuojingdong.com,*.dayuxiangqian.com, *.*apps.com, api.shayujizhang.com, account.wps.cn, ap*.intsig.net, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bili*i.com, ap?.bili*i.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store, api.m.jd.com
+hostname = api.rr.tv, res.kfc.com, mb3admin.com, *.emby.wtf:0, *.plusmedia.site:0, *.jmsooo.com:0, app.weilaixushi.com, api.orientlion.com, app.qdjdswkj.com, api.0954auto.com, appapi.xmblgg.com, app.ap.d3yuiw4.com, mp.weixin.qq.com, *.woailuojingdong.com,*.dayuxiangqian.com, *.*apps.com, api.shayujizhang.com, account.wps.cn, ap*.intsig.net, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, ap?.bili*i.com, ap?.bili*i.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store, api.m.jd.com
 
