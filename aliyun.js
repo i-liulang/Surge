@@ -85,7 +85,7 @@ function http(req) {
 
 			$done({ response: myResponse });
 		}
-	} else if (url.indexOf("/webapi/entry.cgi") != -1) {
+	} else if (url.match(/entry\.cgi$/)) {
 		const body = $request.body;
 		if (typeof body === "string") {
 			// 当前的请求为加载目录
@@ -138,10 +138,11 @@ function http(req) {
 				$done({ response: myResponse });
 			}
 		}
-	} else if (url.indexOf("fbdownload") != -1) {
-		const hex = url.match(/dlink=%22(.*)%22/)[1];
-		const fileid = hex2str(hex);
-		const body = {
+	}else{
+	const fileid =
+	url.match("fbdownload") ?
+hex2str( url.match(/dlink=%22(.*)%22/)[1] ) : url.match(/path=(.*$)/)[1];
+	const body = {
 			drive_id: driveId,
 			expire_sec: 14400,
 			file_id: fileid,
@@ -152,11 +153,8 @@ function http(req) {
 			headers: headers,
 			body: JSON.stringify(body),
 		};
-
 		const link = (await http(req)).url;
-
+		
 		$done({ response: { status: 302, headers: { Location: link } } });
-	}
-
-	$done();
+}
 })();
