@@ -10,7 +10,7 @@
 // force-http-engine-hosts = %APPEND% aliyun.example.com:0 // 要开mpv的话必须添加
 
 // [Script]
-// 阿里云挂载 = type=http-request,pattern=^http:\/\/aliyun\.example\.com,requires-body=1,script-path=阿里云挂载.js,max-size=0,debug=1
+// 阿里云挂载 = type=http-request,pattern=^http:\/\/aliyun\.example\.com,requires-body=1,script-path=阿里云挂载.js,max-size=0,debug=0
 
 
 var url = $request.url;
