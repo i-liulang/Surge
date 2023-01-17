@@ -1,28 +1,31 @@
 #!name=bilibili去广告
 #!desc=开屏页广告,推荐页广告,动态(推荐话题和列表广告),视频播放页面(up主推荐广告,相关推荐广告)
 
-[Rule]
-URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
-# 可能的一些推广(beta)
-URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
-# BiliBili漫画去广告
-URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab),REJECT
-# BiliBili 小卡片广告
-URL-REGEX,^https://api.bilibili.com/pgc/season/player/cards,REJECT
-# BiliBili_Defaultword
-URL-REGEX,^https://app.bilibili.com/x/v2/search/defaultwords,REJECT
+[Map Local]
+# Bili-屏蔽直播间商品广告浮窗@ddgksf2013
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# Bili-屏蔽广告浮窗@ddgksf2013
+^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# Bili-应用开屏去广告@bm7
+^https://app.bilibili.com/x/v2/splash/show data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# Bili-Defaultword@ddgksf2013
+^https://app.bilibili.com/x/v2/search/defaultwords data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# Bili-Material_Ad@ddgksf2013
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# Bili-小卡片广告@ddgksf2013
+^https://api.bilibili.com/pgc/season/player/cards data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# Bili-漫画去广告@ddgksf2013
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 
 [URL Rewrite]
-# 屏蔽广告浮窗
-^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive - reject
-# 去除动态中的最常访问
-^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist - reject
-# BiliBili漫画去广告
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash - reject
+# Bili-屏蔽IP请求@ddgksf2013
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+# Bili-屏蔽DefaultWord@ddgksf2013
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
 
 
 [Script]
+BiliBili_皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/ap(i|p)\.bilibili\.com\/x\/(vip|v2|resource)\/(space|account|web|price|top_panel_info|show)(\/|\?)(mine|myinfo|access|vip_center|panel|_bridge|skin\?).*,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/BiliBili/biliSkin.js
 BiliBili_屏蔽首页右上角活动 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 BiliBili_去除热搜发现 = type=http-response,requires-body=1,max-size=0,pattern=^https://app.bilibili.com/x/v2/search/square,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 BiliBili_去除统一观影页面广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
