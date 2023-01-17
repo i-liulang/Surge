@@ -21,7 +21,7 @@
 # Bili-屏蔽IP请求@ddgksf2013
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
 # Bili-屏蔽DefaultWord@ddgksf2013
-^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default - reject
 
 
 [Script]
