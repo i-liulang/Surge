@@ -84,4 +84,6 @@ DOMAIN,direct.nebula-emby.com
 
 # > 流媒体gfwEmby服务器
 DOMAIN,nl-s1.gfwemby.org
+DOMAIN,nl-cf.gfwemby.org
+DOMAIN,nl-s2.gfwemby.org
 
