@@ -1,15 +1,15 @@
 let $ = {
-BL:'https://www.bilibili.com',
-BD:'https://www.baidu.com',
-YT:'https://www.youtube.com/',
-GG:'https://www.google.com/generate_204',
-GB:'https://www.github.com'
+𝗕𝗟:'https://www.bilibili.com',
+𝗕𝗗:'https://www.baidu.com',
+𝗬𝗧:'https://www.youtube.com/',
+𝗚𝗚:'https://www.google.com/generate_204',
+𝗚𝗛:'https://www.github.com'
 }
 
 !(async () => {
-await Promise.all([http('BD'),http('BL'),http('GB'),http('GG'),http('YT')]).then((x)=>{
+await Promise.all([http('𝗕𝗗'),http('𝗕𝗟'),http('𝗚𝗛'),http('𝗚𝗚'),http('𝗬𝗧')]).then((x)=>{
 	$done({
-    title: 'Network Connectivity Test',
+    title: '𝗡𝗲𝘁𝘄𝗼𝗿𝗸 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗶𝘃𝗶𝘁𝘆 𝗧𝗲𝘀𝘁',
     content: x.join('\xa0|\xa0'),
     icon: 'timer',
     'icon-color': '#FF5A9AF9',
