@@ -20,7 +20,7 @@ if ($trigger == "button") {
 };
 $done({
     title:"𝗦𝗨𝗥𝗚𝗘 𝗣𝗥𝗢 已运行"+startTime,
-    content:"𝗠𝗶𝘁𝗺:"+icon_status(mitm_status.enabled)+"  𝗥𝗲𝘄𝗿𝗶𝘁𝗲:"+icon_status(rewrite_status.enabled)+"  𝗦𝗰𝗿𝗶𝗽𝘁𝗶𝗻𝗴:"+icon_status(scripting_status.enabled),
+    content:"𝗠𝗶𝘁𝗺:"+icon_status(mitm_status.enabled)+" | 𝗥𝗲𝘄𝗿𝗶𝘁𝗲:"+icon_status(rewrite_status.enabled)+" | 𝗦𝗰𝗿𝗶𝗽𝘁𝗶𝗻𝗴:"+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"exclamationmark.circle",
    "icon-color":icon_s?"#F6C970":"#FF2121"
 });
