@@ -10,7 +10,7 @@ GB:'https://www.github.com'
 await Promise.all([http('BD'),http('BL'),http('GB'),http('GG'),http('YT')]).then((x)=>{
 	$done({
     title: 'Network Connectivity Test',
-    content: x.join('|'),
+    content: x.join('\xa0|\xa0'),
     icon: 'timer',
     'icon-color': '#FF5A9AF9',
   })
