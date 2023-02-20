@@ -11,7 +11,7 @@ Github:'https://www.github.com'
 await Promise.all([http('Baidu'),http('Bilibili'),http('Github'),http('Google'),http('Youtube')]).then((x)=>{
 	$done({
     title: 'Network Connectivity Test',
-    content: x.join(' | '),
+    content: x.join('|'),
     icon: 'timer',
     'icon-color': '#FF5A9AF9',
   })
