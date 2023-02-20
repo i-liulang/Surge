@@ -7,7 +7,7 @@ let $ = {
 }
 
 !(async () => {
-await Promise.all([http('𝗕𝗗'),http('𝗕𝗟'),http('𝗚𝗛'),http('𝗚𝗚'),http('𝗬𝗧')]).then((x)=>{
+await Promise.all([http('𝗕𝗟'),http('𝗚𝗛'),http('𝗬𝗧')]).then((x)=>{
 	$done({
     title: '𝗡𝗲𝘁𝘄𝗼𝗿𝗸 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗶𝘃𝗶𝘁𝘆 𝗧𝗲𝘀𝘁',
     content: x.join('\xa0|\xa0'),
