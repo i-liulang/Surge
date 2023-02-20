@@ -21,7 +21,7 @@ function http(req) {
 			let time = Date.now();
         $httpClient.post(req, (err, resp, data) => {
             r(req.split(".")[1]+
-						' : ' +
+						' \t: ' +
 						(Date.now() - time)+' ms');
         });
     });
