@@ -5,15 +5,6 @@ DOMAIN,emby.nexitally.com
 DOMAIN,emby.otakudrive.life
 DOMAIN,emby2.otakudrive.life 
 
-# > 流媒体emby-jmsooo体验服
-DOMAIN,agahk1.jmsooo.com
-DOMAIN,agasg1.jmsooo.com
-DOMAIN,agajp1.jmsooo.com
-DOMAIN,aws.jmsooo.com
-DOMAIN,ntt1.jmsooo.com
-DOMAIN,hinet.jmsooo.com
-DOMAIN,cf1.jmsooo.com
-
 # > 流媒体pornemby服务器
 DOMAIN,pornemby.club
 
@@ -27,19 +18,8 @@ DOMAIN,movie.xeton.dev
 DOMAIN,servers.xeton.dev
 
 # > 流媒体卷毛鼠服务器
-DOMAIN,jmsooo.com
 DOMAIN,cf.jmsooo.com
-DOMAIN,hk.jmsooo.com
-DOMAIN,sg.jmsooo.com
-
-# > 流媒体卷毛鼠服务器
-DOMAIN,emby.wtf
-DOMAIN,pub1back.emby.wtf
-DOMAIN,pub2back.emby.wtf
-DOMAIN,pub3back.emby.wtf
-DOMAIN,pub1.emby.wtf
-DOMAIN,pub2.emby.wtf
-DOMAIN,pub3.emby.wtf
+DOMAIN,ha.jmsooo.com
 
 # > 流媒体masakaf服务器
 DOMAIN,cf.misakaf.org
