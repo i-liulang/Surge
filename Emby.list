@@ -60,8 +60,7 @@ DOMAIN,95.217.228.36
 # > 流媒体Polo服务器
 DOMAIN,df.poloemby.xyz
 DOMAIN,cu.poloemby.xyz
-DOMAIN,nlz.poloemby.xyz
-DOMAIN,happy.poloemby.xyz
+DOMAIN,sp.pololine.ml
 
 # > 流媒体Cc服务器
 DOMAIN,cc.ccemby.tk
@@ -87,3 +86,6 @@ DOMAIN,nl-s1.gfwemby.org
 DOMAIN,nl-cf.gfwemby.org
 DOMAIN,amsterdam.emby.homes
 
+# > 流媒体BlueSea服务器
+DOMAIN,Bluesea.ddns.me
+DOMAIN,emby-pub1.blueseacdn.com
