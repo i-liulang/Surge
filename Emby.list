@@ -69,3 +69,6 @@ DOMAIN,amsterdam.emby.homes
 # > 流媒体BlueSea服务器
 DOMAIN,Bluesea.ddns.me
 DOMAIN,emby-pub1.blueseacdn.com
+
+# > 流媒体infinityfly服务器
+DOMAIN,infinityfly.top
