@@ -72,3 +72,7 @@ DOMAIN,emby-pub1.blueseacdn.com
 
 # > 流媒体infinityfly服务器
 DOMAIN,infinityfly.top
+
+# > 流媒体Mulgore服务器
+DOMAIN,one.mulgore.net
+DOMAIN,two.mulgore.net
