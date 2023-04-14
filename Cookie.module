@@ -47,6 +47,8 @@
 # > Bing积分 登录 https://rewards.bing.com 获取 Cookie
 Bing积分cookie = requires-body=0,type=http-request,pattern=https:\/\/rewards\.bing\.com,script-path= https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js
 
+# > 腾讯视频 app获取
+腾讯视频Cookie = type=http-request,pattern=^https?:\/\/iacc\.rec\.qq\.com,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js,requires-body=0
 
 [MITM]
-hostname = draw.jdfcloud.com, music.163.com, *.bilibili.com, api.m.jd.com, passport.iqiyi.com, api.weibo.cn, m.weibo.cn, c.tieba.baidu.com, zhiyou.smzdm.com, *.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, i.meituan.com, auth.aliyundrive.com, rewards.bing.com
+hostname = draw.jdfcloud.com, music.163.com, *.bilibili.com, api.m.jd.com, passport.iqiyi.com, api.weibo.cn, m.weibo.cn, c.tieba.baidu.com, zhiyou.smzdm.com, *.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, i.meituan.com, auth.aliyundrive.com, rewards.bing.com, iacc.rec.qq.com
