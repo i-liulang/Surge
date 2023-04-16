@@ -16,6 +16,7 @@
 # wk: 维基中文
 # mg: Magi
 # tf: Google 搜索 TestFlight
+# bi: Bing
 
 # yd: 有道词典搜索
 # trc: Google 译至中
@@ -135,6 +136,7 @@
 ^https:\/\/duckduckgo.com\/\?q=ec\+([^&]+).+ https://www.ecosia.org/search?q=$1 302
 # bi: 必应
 ^https:\/\/duckduckgo.com\/\?q=bi\+([^&]+).+ https://cn.bing.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+by.+ https://www.bing.com/search?q=$1 302
 # bd: 百度
 ^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
 # ddg: DuckDuckGo 
