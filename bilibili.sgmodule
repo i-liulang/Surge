@@ -23,7 +23,7 @@
 
 
 [Script]
-BiliBili_皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/ap(i|p)\.bilibili\.com\/x\/(vip|v2|resource)\/(space|account|web|price|top_panel_info|show)(\/|\?)(mine|myinfo|access|vip_center|panel|_bridge|skin\?).*,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/BiliBili/biliSkin.js
+//BiliBili_皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/ap(i|p)\.bilibili\.com\/x\/(vip|v2|resource)\/(space|account|web|price|top_panel_info|show)(\/|\?)(mine|myinfo|access|vip_center|panel|_bridge|skin\?).*,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/BiliBili/biliSkin.js
 BiliBili_视频播放下方商品推广 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 BiliBili_屏蔽直播间商品广告浮窗 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 BiliBili_屏蔽直播页顶部轮播图 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
