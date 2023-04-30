@@ -3,17 +3,17 @@
 
 [Map Local]
 # Bili-屏蔽广告浮窗@ddgksf2013
-^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive data="https://raw.githubusercontent.com/gitupdate/updateTeam/master/reject-dict.json"
 # Bili-应用开屏去广告@bm7
-^https://app.bilibili.com/x/v2/splash/show data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https://app.bilibili.com/x/v2/splash/show data="https://raw.githubusercontent.com/gitupdate/updateTeam/master/reject-dict.json"
 # Bili-Defaultword@ddgksf2013
-^https://app.bilibili.com/x/v2/search/defaultwords data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https://app.bilibili.com/x/v2/search/defaultwords data="https://raw.githubusercontent.com/gitupdate/updateTeam/master/reject-dict.json"
 # Bili-Material_Ad@ddgksf2013
-^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report data="https://raw.githubusercontent.com/gitupdate/updateTeam/master/reject-dict.json"
 # Bili-小卡片广告@ddgksf2013
-^https://api.bilibili.com/pgc/season/player/cards data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https://api.bilibili.com/pgc/season/player/cards data="https://raw.githubusercontent.com/gitupdate/updateTeam/master/reject-dict.json"
 # Bili-漫画去广告@ddgksf2013
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) data="https://raw.githubusercontent.com/gitupdate/updateTeam/master/reject-dict.json"
 
 [URL Rewrite]
 # Bili-屏蔽IP请求@ddgksf2013
@@ -37,7 +37,7 @@ BiliBili_追番去广告 = type=http-response,requires-body=1,max-size=0,pattern
 BiliBili_直播去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 //BiliBili_标签页处理 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 //BiliBili_我的页面处理 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/bilibili_json.js
-BiliBili-proto去广告 = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/BiliBili/Modified.js,script-update-interval=0
+BiliBili-proto去广告 = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto.js,script-update-interval=0
 
 [MITM]
 hostname = %APPEND%  api.live.bilibili.com,api.vc.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,
