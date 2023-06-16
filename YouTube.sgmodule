@@ -1,0 +1,13 @@
+#!name=Youtube
+#!desc=翻译为简体中文+净化
+
+
+[Script]
+YouTube-Translate = type=http-response,pattern=^https:\/\/www\.youtube\.com\/api\/timedtext,requires-body=1,max-size=0,timeout=20,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/surgeYouTubeFY.js
+
+[Map Local]
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/gitupdate/updateTeam/master/reject-200.txt" header="Content-Type: application/vnd.yt-ump"
+
+
+[MITM]
+hostname = %APPEND% *.googlevideo.com, www.youtube.com
