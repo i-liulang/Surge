@@ -13,7 +13,7 @@
 # Bili-小卡片广告@ddgksf2013
 ^https://api.bilibili.com/pgc/season/player/cards data="https://raw.githubusercontent.com/gitupdate/updateTeam/master/reject-dict.json"
 # Bili-漫画去广告@ddgksf2013
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) data="https://raw.githubusercontent.com/gitupdate/updateTeam/master/reject-dict.json"
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) data="https://raw.githubusercontent.com/gitupdate/updateTeam/master/reject-dict.json"
 
 [URL Rewrite]
 # Bili-屏蔽IP请求@ddgksf2013
@@ -24,21 +24,29 @@
 
 [Script]
 BiliBili_皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/ap(i|p)\.bilibili\.com\/x\/(vip|v2|resource)\/(space|account|web|price|top_panel_info|show)(\/|\?)(mine|myinfo|access|vip_center|panel|_bridge|skin\?).*,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/BiliBili/biliSkin.js
-BiliBili_哔哩哔哩_青少年弹窗 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus,requires-body=1,script-path=https://raw.githubusercontent.com/BiliUniverse/ADBlock/main/js/BiliBili.ADBlock.response.js
+
 BiliBili_视频播放下方商品推广 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+
+BiliBili_直播去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 BiliBili_屏蔽直播间商品广告浮窗 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-BiliBili_屏蔽直播页顶部轮播图 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-//BiliBili_屏蔽首页右上角活动 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-BiliBili_去除热搜发现 = type=http-response,requires-body=1,max-size=0,pattern=^https://app.bilibili.com/x/v2/search/square,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-BiliBili_去除统一观影页面广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-//BiliBili_去除统一设置的皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+
 BiliBili_去除应用开屏广告预加载 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+
+BiliBili_屏蔽直播页顶部轮播图 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 BiliBili_推荐去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 BiliBili_追番去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-BiliBili_直播去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+BiliBili_去除观影页面广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+
+BiliBili_去除热搜发现 = type=http-response,requires-body=1,max-size=0,pattern=^https://app.bilibili.com/x/v2/search/square,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+
+BiliBili_搜索去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$,requires-body=1,script-path=https://raw.githubusercontent.com/BiliUniverse/ADBlock/main/js/BiliBili.ADBlock.response.js
+BiliBili_青少年弹窗 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus,requires-body=1,script-path=https://raw.githubusercontent.com/BiliUniverse/ADBlock/main/js/BiliBili.ADBlock.response.js
+BiliBili-proto去广告 = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto.js,script-update-interval=0
+
+//BiliBili_屏蔽首页右上角活动 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 //BiliBili_标签页处理 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 //BiliBili_我的页面处理 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/bilibili_json.js
-BiliBili-proto去广告 = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto.js,script-update-interval=0
+//BiliBili_去除统一设置的皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 
 [MITM]
 hostname = %APPEND%  api.live.bilibili.com,api.vc.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,
