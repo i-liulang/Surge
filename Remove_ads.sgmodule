@@ -96,6 +96,8 @@ URL-REGEX,^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.allreso
 URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/, REJECT
 # > 淘宝开屏 gw.alicdn.com,heic.alicdn.com  
 URL-REGEX,^https:\/\/(heic|gw)\.alicdn\.com\/imgextra\/i\d\/.+-tps-(702-758|1125-1602)\.(heic|jpg|png), REJECT
+# > 萤石云
+URL-REGEX,^https?:\/\/i\.ys7\.com\/api\/ads\/, REJECT
 
 
 [URL Rewrite]
@@ -104,5 +106,5 @@ URL-REGEX,^https:\/\/(heic|gw)\.alicdn\.com\/imgextra\/i\d\/.+-tps-(702-758|1125
 
 
 [MITM]
-hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, *.cmbchina.com, m.ctrip.com, capis(-slb)?.didapinche.com, creditcardapp.bankcomm.cn, mime.baidu.com, *.umetrip.com, res.kfc.com.cn, cube.elemecdn.com, nr-op.elemecdn.com, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, gw.alicdn.com,heic.alicdn.com 
+hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, *.cmbchina.com, m.ctrip.com, capis(-slb)?.didapinche.com, creditcardapp.bankcomm.cn, mime.baidu.com, *.umetrip.com, res.kfc.com.cn, cube.elemecdn.com, nr-op.elemecdn.com, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, gw.alicdn.com,heic.alicdn.com, i.ys7.com 
 
