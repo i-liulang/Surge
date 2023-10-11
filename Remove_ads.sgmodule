@@ -13,6 +13,15 @@ DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗥𝗢𝗫𝗬
 DOMAIN-KEYWORD,vercel.app,𝗣𝗥𝗢𝗫𝗬
 # > 心动源代理
 DOMAIN-SUFFIX,applehub.cn,𝗣𝗥𝗢𝗫𝗬
+# > Siri与搜索 代理
+PROCESS-NAME,LookupViewService,𝗣𝗥𝗢𝗫𝗬
+PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService,𝗣𝗥𝗢𝗫𝗬
+DOMAIN,lookup-api.apple.com,𝗣𝗥𝗢𝗫𝗬
+DOMAIN,lookup-api.apple.com.edgekey.net,𝗣𝗥𝗢𝗫𝗬
+DOMAIN,e16991.b.akamaiedge.net,𝗣𝗥𝗢𝗫𝗬
+# 通用广告
+DOMAIN-SUFFIX, doubleclick-cn.net, REJECT
+DOMAIN-SUFFIX, doubleclick.net, REJECT
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
 DOMAIN,zh.mk,PROXY
@@ -42,10 +51,6 @@ OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0
 URL-REGEX,^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$,REJECT
 # > 小米运动 去广告 
 URL-REGEX,^https:\/\/api-mifit-cn2\.huami\.com\/discovery\/mi\/cards\/startpage_ad,REJECT
-# > 京东极速版 去广告
-URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT
-# > 京东金融 去广告
-URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture,REJECT
 # > 云闪付 去广告
 URL-REGEX,^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long,REJECT
 # > IT之家 去广告
@@ -74,9 +79,30 @@ DOMAIN,r6.mo.baidu.com,REJECT
 URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime,REJECT
 URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list,REJECT
 URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch,REJECT
-# > 航旅纵横 discardrp.umetrip.com, startup.umetrip.com, 
-URL-REGEX,^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native, REJECT
+# > 航旅纵横 *.umetrip.com, 
+URL-REGEX,^http?:\/\/(home|umerp|discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native, REJECT
+# > KFC开屏广告
+URL-REGEX,^https?:\/\/res.kfc.com.cn\/advertisement\/, REJECT
+# > 饿了么开屏广告 cube.elemecdn.com, nr-op.elemecdn.com
+URL-REGEX,^https:\/\/(nr-op|cube)\.elemecdn\.com\/.+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{4,},h_\d{4,}\/($|format,webp\/$), REJECT
+# 招行掌上生活 (需卸载重装)
+# 开屏广告 az1mbasecc.bas.cmbchina.com
+URL-REGEX,^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec, REJECT
+#设置栏目内广告 intellicc.bas.cmbchina.com
+URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec, REJECT
+# > 飞猪去开屏广告
+URL-REGEX,^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.allresource ,REJECT
+# > 淘票票开屏
+URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/, REJECT
+# > 淘宝开屏 gw.alicdn.com,heic.alicdn.com  
+URL-REGEX,^https:\/\/(heic|gw)\.alicdn\.com\/imgextra\/i\d\/.+-tps-(702-758|1125-1602)\.(heic|jpg|png), REJECT
+
+
+[URL Rewrite]
+# > 京东极速版去弹窗
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush response-body pushData response-body ddgksf2013
 
 
 [MITM]
-hostname = %APPEND%
+hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, *.cmbchina.com, m.ctrip.com, capis(-slb)?.didapinche.com, creditcardapp.bankcomm.cn, mime.baidu.com, *.umetrip.com, res.kfc.com.cn, cube.elemecdn.com, nr-op.elemecdn.com, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, gw.alicdn.com,heic.alicdn.com 
+creditcardapp\.bankcomm\.cn
