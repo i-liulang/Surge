@@ -1,5 +1,6 @@
-#!name=Tasks
-#!desc=iOS Tasks 模块配置
+#!name=定时脚本
+#!desc=最后更新时间 2023-10-11
+#!system=ios
 
 [Script]
 
