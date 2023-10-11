@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2023-10-011
+#!desc=更新时间 2023-10-11
 #!system=ios
 
 [Header Rewrite]
@@ -34,7 +34,7 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 阿里云盘净化= type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=3145728,timeout=60,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js,script-update-interval=0
 # > JavDB 
 JavDB = type=http-response,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+),script-path=https://raw.githubusercontent.com/chxm1023/Advertising/main/JavDB.js,script-update-interval=0
-JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js
+JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js, requires-body=true,timeout=120
 # > 彩云天气 解锁
 //彩云天气 = type=http-response, pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
 # > Adguard Pro *api.adguard.com
