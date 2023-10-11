@@ -82,7 +82,7 @@ URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch,REJECT
 # > 航旅纵横 *.umetrip.com, 
 URL-REGEX,^http?:\/\/(home|umerp|discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native, REJECT
 # > KFC开屏广告
-URL-REGEX,^https?:\/\/res.kfc.com.cn\/advertisement\/, REJECT
+URL-REGEX,^https:\/\/res\.kfc\.com\.cn\/advertisement, REJECT
 # > 饿了么开屏广告 cube.elemecdn.com, nr-op.elemecdn.com
 URL-REGEX,^https:\/\/(nr-op|cube)\.elemecdn\.com\/.+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{4,},h_\d{4,}\/($|format,webp\/$), REJECT
 # 招行掌上生活 (需卸载重装)
