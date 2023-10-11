@@ -1,0 +1,82 @@
+#!name=去广告
+#!desc=更新时间 2023-10-11
+#!system=ios
+
+[General]
+# > 代理检测
+skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
+
+[Rule]
+# > Boxjs 代理
+DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗥𝗢𝗫𝗬
+# > Sub-Store 代理
+DOMAIN-KEYWORD,vercel.app,𝗣𝗥𝗢𝗫𝗬
+# > 心动源代理
+DOMAIN-SUFFIX,applehub.cn,𝗣𝗥𝗢𝗫𝗬
+# > Safari 防跳转
+DOMAIN,app-site-association.cdn-apple.com,REJECT
+DOMAIN,zh.mk,PROXY
+# > 爱奇艺 去广告
+DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
+# > 优酷 去广告
+DOMAIN, iyes.youku.com,REJECT
+URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
+# > 京东 去广告
+URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT
+URL-REGEX,^https:\/\/m\.360buyimg\.com\/mobilecms\/s\d{4}x\d{4},REJECT
+#  > 京东极速版 去广告
+URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT-TINYGIF
+URL-REGEX,^https:\/\/img11.360buyimg.com\/dl\/jfs\/t1\/195304\/29\/12317\/268480\/60e6fd21E02a8fb2a\/,REJECT-TINYGIF
+# > 京喜 去开屏
+URL-REGEX,^https:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show$,REJECT
+URL-REGEX,^http:\/\/m\.360buyimg\.com\/deliveryadmin\/jfs\/t1,REJECT
+#  > 京东金融 去广告
+URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture,REJECT
+# > 京东读书去开屏
+URL-REGEX,https://jdread-api.jd.com/jdread/api/channel/module/opens,REJECT
+URL-REGEX,https://jdread-api.jd.com/jdread/api/popup,REJECT
+# > 腾讯视频 去开屏
+IP-CIDR,47.110.187.87/32,REJECT
+OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
+# > 交管12123 去广告
+URL-REGEX,^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$,REJECT
+# > 小米运动 去广告 
+URL-REGEX,^https:\/\/api-mifit-cn2\.huami\.com\/discovery\/mi\/cards\/startpage_ad,REJECT
+# > 京东极速版 去广告
+URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT
+# > 京东金融 去广告
+URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture,REJECT
+# > 云闪付 去广告
+URL-REGEX,^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long,REJECT
+# > IT之家 去广告
+URL-REGEX,^https:\/\/api\.zuihuimai\.com,REJECT
+# > 美团 去广告
+URL-REGEX,^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg$,REJECT
+URL-REGEX,^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$,REJECT
+# > 拼多多 去开屏
+URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,REJECT
+# > 威锋 去广告
+URL-REGEX,^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/(infoCenterAd|yesList),REJECT
+# > 招商银行
+URL-REGEX,^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic,REJECT
+URL-REGEX,^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig,REJECT
+# > 订票助手
+URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds,REJECT
+URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList,REJECT
+# > 嘀嗒出行
+URL-REGEX,^https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/,REJECT
+# > 买单吧
+URL-REGEX,^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do ,REJECT
+# > 百度输入法
+DOMAIN-KEYWORD,jomodns,REJECT
+DOMAIN,res.mi.baidu.com,REJECT
+DOMAIN,r6.mo.baidu.com,REJECT
+URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime,REJECT
+URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list,REJECT
+URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch,REJECT
+# > 航旅纵横 discardrp.umetrip.com, startup.umetrip.com, 
+URL-REGEX,^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native, REJECT
+
+
+[MITM]
+hostname = %APPEND%
