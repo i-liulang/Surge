@@ -1,74 +1,46 @@
 #!name=脚本合集
-#!desc=会员+去广告
+#!desc=更新时间 2023-10-011
 #!system=ios
 
-# 分割线——————————————————————————
-
-[Rule]
-# > 爱奇艺 去暂停广告
-DOMAIN-SUFFIX, cupid.iqiyi.com,REJECT
-
-# > 人人视频 去广告
-AND,((USER-AGENT,PUClient*), (NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
-URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
-
-# > 优酷 去广告
-DOMAIN, iyes.youku.com,REJECT
-URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
-
-#  > 京东极速版 去广告
-URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT-TINYGIF
-
-#  > 京东金融 去广告
-URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture ,REJECT-TINYGIF
-
-# > 京东库代理
-DOMAIN-SUFFIX,jdsharedresourcescdn.azureedge.net,𝗣𝗥𝗢𝗫𝗬
-
-# > dayone
-URL-REGEX,^https:\/\/dayone\.me,𝗣𝗥𝗢𝗫𝗬
-
-# > 腾讯视频直连
-DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
-
-
-# 分割线——————————————————————————
+[General]
+force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 
 [Script]
 
-# > 人人视频 去广告
-人人视频 = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel,script-path=https://Choler.github.io/Surge/Script/rrsp.js
-
-# > 人人视频 解锁
-人人视频 = requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv\/user\/privilege\/list
-人人视频 = requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv\/ad\/getAll
-人人视频 = requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail
-
+# > 扫描全能王 pro
+扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
+# > 微信 去除公众号文章底部广告 
+微信公众号 = type=http-response,requires-body=1,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+# > 京东App 历史价格 
+京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
+# > 豆瓣电影 搜索
+豆瓣电影 = type=http-response,pattern=^https://m.douban.com/movie/subject/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Douban.js
+# > IT之家 去广告
+ＩＴ之家 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/(napi|api|m)\.ithome\.com\/(api|json)\/(news|topmenu|listpage|newslist|slide)\/(getfeeds|index|slide),script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js,script-update-interval=0
+# > Boxjs
+会话数据 = type=http-request,pattern=https?:\/\/boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
+# > SUB订阅管理
+订阅管理 = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
+# > Emby 解锁
+EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Emby.js
+# > 奈飞评分
+奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+# > 阿里云盘净化
+阿里云盘净化= type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=3145728,timeout=60,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js,script-update-interval=0
+# > JavDB 
+JavDB = type=http-response,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+),script-path=https://raw.githubusercontent.com/chxm1023/Advertising/main/JavDB.js,script-update-interval=0
+JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js
+# > 彩云天气 解锁
+//彩云天气 = type=http-response, pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
 # > Adguard Pro *api.adguard.com
-Adguard = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.com\/api\/.+\/ios_validate_receipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/adguard.js,script-update-interval=-1
-
-# > 酷我音乐   musicpay.kuwo.cn, vip1.kuwo.cn,
-http-response ^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/theme)  requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/theme.js
-http-response ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver=\d  requires-body=1,max-size=0,script-path= https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/kuwodl.js
-http-response ^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice)  requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/kuwo.js
-
+//Adguard = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.com\/api\/.+\/ios_validate_receipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/adguard.js,script-update-interval=-1
 # > Gear Pro   greasyfork.org,
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/O7Y0/Profiles/master/QuantumultX/Rewrite/Gear.js
+//http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/O7Y0/Profiles/master/QuantumultX/Rewrite/Gear.js
+# > 百度网盘 解锁
+//百度网盘 = type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bdcloud.js
 
-# > 拦截100解锁超级会员   tagit.hyhuo.com
-http-response ^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100SVIPCrack.js
-
-# > 南方周末   api.infzm.com
-http-response ^https?:\/\/api\.infzm\.com\/mobile\/(user|contents\?|contents\/\d+\?|contents\/\d+\/isview\?|course_borrow|courses\/\d+\?|mall|course_items) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/NanFangZhouMo.js
-
-# > 豆瓣电影和电视剧添加便捷播放按钮  m.douban.com
-http-response ^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/DouBan.js
-
-# Notability解锁订阅  notability.com
-http-response ^https?:\/\/notability\.com\/subscriptions requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/NotabilityProCrack.js
-
-# 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% api.rr.tv, *api.adguard.com, musicpay.kuwo.cn, vip1.kuwo.cn, greasyfork.org, tagit.hyhuo.com, api.infzm.com, m.douban.com, notability.com, 
+hostname = %APPEND% *.camscanner.com, mp.weixin.qq.com, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, *.intsig.net,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.yijingluowangluo.xyz, jdforrepam.com, biz.cyapi.cn, *api.adguard.com, pan.baidu.com
 
