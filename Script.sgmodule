@@ -2,11 +2,14 @@
 #!desc=更新时间 2023-10-011
 #!system=ios
 
+[Header Rewrite]
+# > Bing Ai
+^https:\/\/www\.bing\.com\/search header-replace User-Agent "Mozilla/5.0 (iphone; Intel Mac OS X 10_12_6) AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
+
 [General]
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 
 [Script]
-
 # > 扫描全能王 pro
 扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
 # > 微信 去除公众号文章底部广告 
@@ -42,5 +45,5 @@ JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|j
 
 
 [MITM]
-hostname = %APPEND% *.camscanner.com, mp.weixin.qq.com, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, *.intsig.net,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.yijingluowangluo.xyz, jdforrepam.com, biz.cyapi.cn, *api.adguard.com, pan.baidu.com
+hostname = %APPEND% www.bing.com,*.camscanner.com, mp.weixin.qq.com, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, *.intsig.net,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.yijingluowangluo.xyz, jdforrepam.com, biz.cyapi.cn, *api.adguard.com, pan.baidu.com
 
