@@ -83,6 +83,8 @@ URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch,REJECT
 URL-REGEX,^http?:\/\/(home|umerp|discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native, REJECT
 # > KFC开屏广告
 URL-REGEX,^https:\/\/res\.kfc\.com\.cn\/advertisement, REJECT
+URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\?, REJECT
+URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome, REJECT
 # > 饿了么开屏广告 cube.elemecdn.com, nr-op.elemecdn.com
 URL-REGEX,^https:\/\/(nr-op|cube)\.elemecdn\.com\/.+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{4,},h_\d{4,}\/($|format,webp\/$), REJECT
 # 招行掌上生活 (需卸载重装)
@@ -93,7 +95,7 @@ URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.
 # > 飞猪去开屏广告
 URL-REGEX,^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.allresource ,REJECT
 # > 淘票票开屏
-URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/, REJECT
+URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.(queryadvertise|queryloadingbanner)\/, REJECT
 # > 淘宝开屏 gw.alicdn.com,heic.alicdn.com  
 URL-REGEX,^https:\/\/(heic|gw)\.alicdn\.com\/imgextra\/i\d\/.+-tps-(702-758|1125-1602)\.(heic|jpg|png), REJECT
 # > 萤石云
