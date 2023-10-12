@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2023-10-11
+#!desc=更新时间 2023-10-12
 #!system=ios
 
 [Header Rewrite]
@@ -46,5 +46,5 @@ JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|j
 
 
 [MITM]
-hostname = %APPEND% www.bing.com,*.camscanner.com, mp.weixin.qq.com, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, *.intsig.net,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.yijingluowangluo.xyz, jdforrepam.com, biz.cyapi.cn, *api.adguard.com, pan.baidu.com
+hostname = %APPEND% www.bing.com,*.camscanner.com, mp.weixin.qq.com, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, *.intsig.net,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.pxxgg.xyz, api.ujvnmkx.cn, api.yijingluowangluo.xyz, jdforrepam.com, biz.cyapi.cn, *api.adguard.com, pan.baidu.com
 
