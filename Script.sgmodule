@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2023-10-11
+#!desc=更新时间 2023-10-12
 #!system=ios
 
 [Header Rewrite]
@@ -33,8 +33,8 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 # > 阿里云盘净化
 阿里云盘净化= type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=3145728,timeout=60,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js,script-update-interval=0
 # > JavDB 
-JavDB = type=http-response,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+),script-path=https://raw.githubusercontent.com/chxm1023/Advertising/main/JavDB.js,script-update-interval=0
-JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js, requires-body=true,timeout=120
+JavDB = type=http-response,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+),script-path=https://raw.githubusercontent.com/chxm1023/Advertising/main/JavDB.js, requires-body=true, timeout=60, script-update-interval=0
+JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js, timeout=60, script-update-interval=0
 # > 彩云天气 解锁
 //彩云天气 = type=http-response, pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
 # > Adguard Pro *api.adguard.com
@@ -46,5 +46,5 @@ JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|j
 
 
 [MITM]
-hostname = %APPEND% www.bing.com,*.camscanner.com, mp.weixin.qq.com, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, *.intsig.net,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.yijingluowangluo.xyz, jdforrepam.com, biz.cyapi.cn, *api.adguard.com, pan.baidu.com
+hostname = %APPEND% www.bing.com,*.camscanner.com, mp.weixin.qq.com, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, *.intsig.net,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.pxxgg.xyz, api.ujvnmkx.cn, api.yijingluowangluo.xyz, jdforrepam.com, biz.cyapi.cn, *api.adguard.com, pan.baidu.com
 
