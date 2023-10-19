@@ -31,7 +31,7 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 # > 阿里云盘净化
-阿里云盘净化= type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=3145728,timeout=60,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js,script-update-interval=0
+阿里云盘净化= type=http-response,pattern=^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js
 # > JavDB 
 JavDB = type=http-response,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+),script-path=https://raw.githubusercontent.com/chxm1023/Advertising/main/JavDB.js, requires-body=true, timeout=60, script-update-interval=0
 JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js, timeout=60, script-update-interval=0
