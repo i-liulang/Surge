@@ -35,4 +35,4 @@ IT之家 = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\
 
 
 [MITM]
-hostname = %APPEND% *.bilibili.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, zhiyou.smzdm.com, *.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, i.meituan.com, auth.aliyundrive.com, my.ruanmei.com, 
+hostname = %APPEND% *.bilibili.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.aliyundrive.com, my.ruanmei.com, 
