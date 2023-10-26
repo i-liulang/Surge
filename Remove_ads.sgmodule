@@ -124,8 +124,6 @@ URL-REGEX,^https?:\/\/i\.ys7\.com\/api\/ads\/, REJECT
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush response-body pushData response-body ddgksf2013
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url response-body jdLiteAdvertisingVO response-body ddgksf2013
 
-^http:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ \r\nrpid: 10000(18|19) url-and-header reject
-
 
 [Script]
 广告联盟json = type=http-response,pattern=^https:\/\/((api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js
