@@ -13,7 +13,7 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 # > 扫描全能王 pro
 扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
 # > 微信 去除公众号文章底部广告 
-微信公众号 = type=http-response,requires-body=1,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+//微信公众号 = type=http-response,requires-body=1,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 # > 京东App 历史价格 
 京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
 京东搜索 = type=http-response,requires-body=1,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms),script-path=https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js
