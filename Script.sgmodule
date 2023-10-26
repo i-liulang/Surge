@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2023-10-24
+#!desc=更新时间 2023-10-26
 #!system=ios
 
 [Header Rewrite]
@@ -12,8 +12,6 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 [Script]
 # > 扫描全能王 pro
 扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
-# > 微信 去除公众号文章底部广告 
-//微信公众号 = type=http-response,requires-body=1,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 # > 京东App 历史价格 
 京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
 京东搜索 = type=http-response,requires-body=1,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms),script-path=https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js
@@ -48,5 +46,5 @@ JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.yijingluowangluo\.xyz|j
 
 
 [MITM]
-hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, mp.weixin.qq.com, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.pxxgg.xyz, api.ujvnmkx.cn, api.yijingluowangluo.xyz, jdforrepam.com, spclient.wg.spotify.com, biz.cyapi.cn, *api.adguard.com, pan.baidu.com
+hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.pxxgg.xyz, api.ujvnmkx.cn, api.yijingluowangluo.xyz, jdforrepam.com, spclient.wg.spotify.com, biz.cyapi.cn, *api.adguard.com, pan.baidu.com
 
