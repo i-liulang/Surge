@@ -129,7 +129,7 @@ URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 # > 广告联盟
 广告联盟json = type=http-response,pattern=^https:\/\/((api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js
 # > 12306去开屏广告
-12306开屏 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js, timeout=60, script-update-interval=0
+12306开屏 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, timeout=60, script-update-interval=0
 
 
 [MITM]
