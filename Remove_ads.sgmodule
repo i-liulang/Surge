@@ -74,6 +74,11 @@ URL-REGEX,^https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/,REJECT
 # > 买单吧
 URL-REGEX,^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do ,REJECT
 # > 百度输入法
+DOMAIN-KEYWORD,jomodns,REJECT
+DOMAIN,res.mi.baidu.com,REJECT
+DOMAIN,r6.mo.baidu.com,REJECT
+URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime,REJECT
+URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch,REJECT
 URL-REGEX,^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list,REJECT
 URL-REGEX,^https?:\/\/mime\.baidu\.com\/sapi\/v1\/lccorpus\/(applist|pannellist),REJECT
 URL-REGEX,^https?:\/\/mime\.baidu\.com\/sapi\/v1\/(circle\/joinedlist|lccorpus\/usercorpussync|aihelpactivity\/aihelpresource),REJECT
