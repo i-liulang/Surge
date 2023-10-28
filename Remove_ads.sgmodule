@@ -74,12 +74,12 @@ URL-REGEX,^https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/,REJECT
 # > 买单吧
 URL-REGEX,^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do ,REJECT
 # > 百度输入法
-DOMAIN-KEYWORD,jomodns,REJECT
-DOMAIN,res.mi.baidu.com,REJECT
-DOMAIN,r6.mo.baidu.com,REJECT
-URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime,REJECT
-URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list,REJECT
-URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch,REJECT
+URL-REGEX,^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list,REJECT
+URL-REGEX,^https?:\/\/mime\.baidu\.com\/sapi\/v1\/lccorpus\/(applist|pannellist),REJECT
+URL-REGEX,^https?:\/\/mime\.baidu\.com\/sapi\/v1\/(circle\/joinedlist|lccorpus\/usercorpussync|aihelpactivity\/aihelpresource),REJECT
+URL-REGEX,^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list,REJECT
+URL-REGEX,^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input,REJECT
+URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/(fb\/st\?logtype|(notiv3|cellloc_noti|noti_cloudswitch_noti)\/info),REJECT
 # > 航旅纵横 *.umetrip.com, 
 URL-REGEX,^http?:\/\/(home|umerp|discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native, REJECT
 # > KFC开屏广告
@@ -129,5 +129,5 @@ URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 广告联盟json = type=http-response,pattern=^https:\/\/((api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js
 
 [MITM]
-hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, api-mifit-cn2.huami.com, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, *.cmbchina.com, m.ctrip.com, capis(-slb)?.didapinche.com, creditcardapp.bankcomm.cn, mime.baidu.com, *.umetrip.com, res.kfc.com.cn, cube.elemecdn.com, nr-op.elemecdn.com, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, mp.weixin.qq.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com 
+hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, api-mifit-cn2.huami.com, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, *.cmbchina.com, m.ctrip.com, capis(-slb)?.didapinche.com, creditcardapp.bankcomm.cn, mime.baidu.com, mbd.baidu.com, *.umetrip.com, res.kfc.com.cn, cube.elemecdn.com, nr-op.elemecdn.com, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, mp.weixin.qq.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com 
 
