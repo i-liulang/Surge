@@ -113,7 +113,7 @@ URL-REGEX,^https?:\/\/i\.ys7\.com\/api\/ads\/, REJECT
 # > 建设银行
 URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 # > 12306
-DOMAIN,ad.12306.cn, DIRECT
+DOMAIN,ad.12306.cn, 𝗗𝗜𝗥𝗘𝗖𝗧
 
 [Map Local]
 # > 微信公众号底部 mp.weixin.qq.com
