@@ -1,5 +1,5 @@
 #!name=去除广告
-#!desc=更新时间 2023-10-28
+#!desc=更新时间 2023-10-31
 #!system=ios
 
 [General]
@@ -32,7 +32,9 @@ DOMAIN, iyes.youku.com,REJECT
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 # > 京东 去广告
 DOMAIN, blackhole.m.jd.com, REJECT
-URL-REGEX,^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|uniformRecommend),REJECT
+IP-CIDR, 101.124.19.122/32, REJECT, no-resolve
+IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT, no-resolve
+URL-REGEX,^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend, REJECT
 #  > 京东极速版 去广告
 URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT-TINYGIF
 URL-REGEX,^https:\/\/img11.360buyimg.com\/dl\/jfs\/t1\/195304\/29\/12317\/268480\/60e6fd21E02a8fb2a\/,REJECT-TINYGIF
