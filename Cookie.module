@@ -2,6 +2,10 @@
 #!desc=定时签到脚本的Cookie获取，不用时禁止
 #!system=ios
 
+[Rule]
+DOMAIN,gslbali.ximalaya.com,REJECT
+DOMAIN,gslbtx.ximalaya.com,REJECT
+
 [Script]
 # > 京东
 # 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
@@ -32,7 +36,9 @@ iQIYI获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/u
 # > IT之家 app获取
 IT之家 = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js,debug=true
 
+# > 腾讯视频 app获取
+腾讯视频Cookie = type=http-request,pattern=^https?:\/\/iacc\.rec\.qq\.com,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/videoqq.js,requires-body=0
 
 
 [MITM]
-hostname = %APPEND% *.bilibili.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.aliyundrive.com, my.ruanmei.com, 
+hostname = %APPEND% *.bilibili.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.aliyundrive.com, my.ruanmei.com, iacc.rec.qq.com, 
