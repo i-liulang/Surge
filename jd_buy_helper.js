@@ -162,7 +162,7 @@ async function all() {
         lk.log('京粉转链请求完成，准备处理数据')
         lk.log(data)
         const result = JSON.parse(data)
-        if (result.code == 0) {
+        if (result.data == 0) {
           if (result.data.promotionUrl) {
             jfConvertorResultUrl = result.data.promotionUrl
             lk.log(jfConvertorResultUrl)
