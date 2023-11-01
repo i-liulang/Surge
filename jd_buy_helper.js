@@ -17,16 +17,12 @@ try {
   all()
 } catch (e) {
   lk.logErr(e)
-  lk.done({
-    body: html
-  })
+  lk.done({body: html})
 }
 
 async function all() {
   if (html == undefined || !html.includes('</html>')) {
-    lk.done({
-      body: html
-    })
+    lk.done({body: html})
   } else {
     lk.log('开始解析')
     let url = lk.getRequestUrl()
