@@ -116,7 +116,13 @@ URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 [Map Local]
 # > 微信公众号底部 mp.weixin.qq.com
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//WeChat.json"
-
+# > 百度地图
+^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui.*qt=rgc data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui.*qt=hw data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/httpdns\.baidubce\.com data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/home\/dynamic data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
 [URL Rewrite]
 # > 京东极速版去弹窗
@@ -133,5 +139,5 @@ URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 
 
 [MITM]
-hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, api-mifit-cn2.huami.com, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, *.cmbchina.com, m.ctrip.com, capis(-slb)?.didapinche.com, creditcardapp.bankcomm.cn, mime.baidu.com, mbd.baidu.com, *.umetrip.com, res.kfc.com.cn, cube.elemecdn.com, nr-op.elemecdn.com, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, mp.weixin.qq.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com, poplayer.template.alibaba.com
+hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, api-mifit-cn2.huami.com, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, *.cmbchina.com, m.ctrip.com, capis(-slb)?.didapinche.com, creditcardapp.bankcomm.cn, mime.baidu.com, mbd.baidu.com, *.umetrip.com, res.kfc.com.cn, cube.elemecdn.com, nr-op.elemecdn.com, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, mp.weixin.qq.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com, poplayer.template.alibaba.com, 180.76.76.200, newclient.map.baidu.com, httpdns.baidubce.com
 
