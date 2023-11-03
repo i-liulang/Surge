@@ -36,6 +36,9 @@ iQIYI获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/u
 # > IT之家 app获取
 IT之家 = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js,debug=true
 
+# > 腾讯视频
+腾讯视频Cookie = type=http-request,pattern=^https?:\/\/iacc\.rec\.qq\.com,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/videoqq.js,requires-body=0
+
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, *.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, user-api.smzdm.com,  xmc.ximalaya.com, auth.aliyundrive.com, my.ruanmei.com, 
+hostname = %APPEND% api.m.jd.com, *.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, user-api.smzdm.com,  xmc.ximalaya.com, auth.aliyundrive.com, my.ruanmei.com, iacc.rec.qq.com,
