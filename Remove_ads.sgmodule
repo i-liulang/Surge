@@ -1,5 +1,5 @@
 #!name=移除广告
-#!desc=更新时间 2023-11-02
+#!desc=更新时间 2023-11-07
 #!system=ios
 
 [General]
@@ -129,6 +129,9 @@ URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 # > 京东极速版去弹窗
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush response-body pushData response-body ddgksf2013
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url response-body jdLiteAdvertisingVO response-body ddgksf2013
+
+# > 慢慢买
+^https?:\/\/apapia-sqk\.manmanbuy\.com\/index_json\.ashx url response-body splashAD response-body ddgksf2013
 
 
 [Script]
