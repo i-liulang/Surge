@@ -138,8 +138,8 @@ URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 # > 广告联盟
 广告联盟json = type=http-response,pattern=^https:\/\/((api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js
 # > 淘宝去开屏广告
-淘宝开屏 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), requires-body=1, max-size=0, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script//Taobao/Taobao_remove_ads.js
-淘宝开屏 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, requires-body=1, max-size=0, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script//Taobao/Taobao_remove_ads.js
+淘宝开屏 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+淘宝开屏 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 
 
 [MITM]
