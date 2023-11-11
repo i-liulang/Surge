@@ -112,6 +112,8 @@ URL-REGEX,^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.second
 URL-REGEX,^https?:\/\/i\.ys7\.com\/api\/ads\/, REJECT
 # > 建设银行
 URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
+# > 无忧短视频
+IP-CIDR,172.233.81.206,DIRECT
 
 
 [Map Local]
