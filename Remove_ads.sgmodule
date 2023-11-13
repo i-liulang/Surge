@@ -1,5 +1,5 @@
 #!name=移除广告
-#!desc=更新时间 2023-11-11
+#!desc=更新时间 2023-11-13
 #!system=ios
 
 [General]
@@ -113,7 +113,7 @@ URL-REGEX,^https?:\/\/i\.ys7\.com\/api\/ads\/, REJECT
 # > 建设银行
 URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 # > 无忧短视频
-IP-CIDR,172.233.81.206,DIRECT
+IP-CIDR,172.233.81.206,DIRECT,no-resolve
 
 
 [Map Local]
