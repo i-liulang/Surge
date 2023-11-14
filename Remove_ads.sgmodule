@@ -19,12 +19,16 @@ PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCSe
 DOMAIN,lookup-api.apple.com,𝗣𝗥𝗢𝗫𝗬
 DOMAIN,lookup-api.apple.com.edgekey.net,𝗣𝗥𝗢𝗫𝗬
 DOMAIN,e16991.b.akamaiedge.net,𝗣𝗥𝗢𝗫𝗬
-# 通用广告
+# > 通用广告
 DOMAIN-SUFFIX, doubleclick-cn.net, REJECT
 DOMAIN-SUFFIX, doubleclick.net, REJECT
+# > 安全浏览限制解除
+DOMAIN, lookup.api.bsb.baidu.com, REJECT
+DOMAIN-SUFFIX, u3.ucweb.com, REJECT
+DOMAIN-KEYWORD, safebrowsing., REJECT
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
-DOMAIN,zh.mk,PROXY
+DOMAIN,zh.mk,𝗣𝗥𝗢𝗫𝗬
 # > 爱奇艺 去广告
 DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
 # > 优酷 去广告
