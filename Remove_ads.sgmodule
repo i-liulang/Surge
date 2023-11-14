@@ -114,7 +114,7 @@ URL-REGEX,^https?:\/\/i\.ys7\.com\/api\/ads\/, REJECT
 # > 建设银行
 URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 # > 无忧短视频
-//IP-CIDR,172.233.81.206/32,DIRECT
+IP-CIDR,172.233.81.206/32,DIRECT
 
 [Map Local]
 # > 微信公众号底部 mp.weixin.qq.com
