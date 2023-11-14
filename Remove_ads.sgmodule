@@ -1,5 +1,5 @@
 #!name=移除广告
-#!desc=更新时间 2023-11-13
+#!desc=更新时间 2023-11-14
 #!system=ios
 
 [General]
@@ -31,7 +31,8 @@ DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
 DOMAIN, iyes.youku.com,REJECT
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 # > 京东 去广告
-URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT
+//URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT
+URL-REGEX,^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend),REJECT
 #  > 京东极速版 去广告
 URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT-TINYGIF
 URL-REGEX,^https:\/\/img11.360buyimg.com\/dl\/jfs\/t1\/195304\/29\/12317\/268480\/60e6fd21E02a8fb2a\/,REJECT-TINYGIF
@@ -142,6 +143,8 @@ IP-CIDR,172.233.81.206,DIRECT,no-resolve
 # > 淘宝去开屏广告
 淘宝开屏 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 淘宝开屏 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+# > 京东去广告
+京东广告 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(personinfoBusiness|start|welcomeHome), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 
 
 [MITM]
