@@ -1,7 +1,6 @@
 #!name = 哔哩哔哩
 #!desc = 没有广告的哔哩哔哩更值得干杯
-#!author = RuCu6 Maasea
-#!update = 2023-11-07 20:05
+#!update = 2023-11-16
 
 [Rule]
 # 放行规则
