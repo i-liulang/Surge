@@ -8,9 +8,9 @@ skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com
 
 [Rule]
 # > 屏蔽多数厂商私有 HTTPDNS
-DOMAIN-KEYWORD,dns,REJECT,extended-matching
+//DOMAIN-KEYWORD,dns,REJECT,extended-matching
 # > 屏蔽B站
-URL-REGEX,^http:\/\/.*\/resolve\?host=.*$,REJECT
+//URL-REGEX,^http:\/\/.*\/resolve\?host=.*$,REJECT
 # > 广告联盟
 DOMAIN, i.snssdk.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
