@@ -88,7 +88,10 @@ URL-REGEX,^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig
 URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds,REJECT
 URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList,REJECT
 # > 嘀嗒出行
-URL-REGEX,^https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/,REJECT
+//URL-REGEX,^https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/,REJECT
+URL-REGEX,^https:\/\/capis(-\d)?\.didapinche\.com\/adbase,REJECT
+URL-REGEX,^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core⺁,REJECT
+URL-REGEX,^https?:\/\/adx-cn\.anythinktech\.com\/bid,REJECT
 # > 买单吧
 URL-REGEX,^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do ,REJECT
 # > 百度输入法
@@ -165,6 +168,6 @@ IP-CIDR,172.233.81.206/32,DIRECT,no-resolve
 
 
 [MITM]
-hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, api-mifit-cn2.huami.com, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, m.ctrip.com, capis(-slb)?.didapinche.com, creditcardapp.bankcomm.cn, mime.baidu.com, mbd.baidu.com, *.umetrip.com, res.kfc.com.cn, cube.elemecdn.com, nr-op.elemecdn.com, az*mbasecc.bas.cmbchina.com
+hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, api-mifit-cn2.huami.com, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, m.ctrip.com, capis(-slb)?.didapinche.com, capis(-\d)?.didapinche.com, conf.diditaxi.com.cn, adx-cn.anythinktech.com, creditcardapp.bankcomm.cn, mime.baidu.com, mbd.baidu.com, *.umetrip.com, res.kfc.com.cn, cube.elemecdn.com, nr-op.elemecdn.com, az*mbasecc.bas.cmbchina.com
 , intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, mp.weixin.qq.com, 180.76.76.200, newclient.map.baidu.com, httpdns.baidubce.com, apapia-sqk.manmanbuy.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com, poplayer.template.alibaba.com,
 
