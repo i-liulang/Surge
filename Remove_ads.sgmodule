@@ -135,7 +135,7 @@ URL-REGEX,^https?:\/\/i\.ys7\.com\/api\/ads\/, REJECT
 # > 建设银行
 URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 # > 视频服务器分流
-DOMAIN-KEYWORD, yuheng, DIRECT
+DOMAIN-KEYWORD,yuheng,DIRECT
 IP-CIDR,172.233.81.206/32,DIRECT,no-resolve
 
 [Map Local]
