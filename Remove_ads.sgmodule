@@ -69,7 +69,7 @@ OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0
 # > 交管12123 去广告
 URL-REGEX,^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$,REJECT
 # > 饿了么 去广告 
-URL-REGEX,^https?:\/\/elemecdn\.com\/.+\/sitemap url reject
+URL-REGEX,^https?:\/\/elemecdn\.com\/.+\/sitemap,REJECT
 URL-REGEX,^https?:\/\/fuss10\.elemecdn\.com\/.+\/w\/640\/h\/\d{3,4},REJECT
 URL-REGEX,^https?:\/\/fuss10\.elemecdn\.com\/.+\/w\/750\/h\/\d{3,4},REJECT
 URL-REGEX,^https?:\/\/fuss10\.elemecdn\.com\/.+?\.mp4,REJECT
