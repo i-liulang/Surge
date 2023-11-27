@@ -14,6 +14,9 @@ skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com
 # > 视频服务器分流
 DOMAIN-KEYWORD,yuheng,𝗗𝗜𝗥𝗘𝗖𝗧
 IP-CIDR,172.233.81.206/32,𝗗𝗜𝗥𝗘𝗖𝗧,no-resolve
+# > 微信消息
+DOMAIN-SUFFIX,weixin.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧,extended-matching
+USER-AGENT,MicroMessenger Client,𝗗𝗜𝗥𝗘𝗖𝗧
 # > 广告联盟
 DOMAIN, i.snssdk.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
