@@ -12,8 +12,8 @@ skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com
 # > 屏蔽B站
 //URL-REGEX,^http:\/\/.*\/resolve\?host=.*$,REJECT
 # > 视频服务器分流
-DOMAIN-KEYWORD,yuheng,𝗗𝗜𝗥𝗘𝗖𝗧
-IP-CIDR,172.233.81.206/32,𝗗𝗜𝗥𝗘𝗖𝗧,no-resolve
+DOMAIN-KEYWORD,yuheng,𝗣𝗥𝗢𝗫𝗬
+IP-CIDR,172.233.81.206/32,𝗣𝗥𝗢𝗫𝗬,no-resolve
 # > 广告联盟
 DOMAIN, i.snssdk.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
