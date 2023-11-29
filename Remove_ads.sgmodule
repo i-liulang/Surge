@@ -2,10 +2,6 @@
 #!desc=更新时间 2023-11-29
 #!system=ios
 
-[General]
-# > 代理检测
-skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
-
 [Rule]
 # > 屏蔽多数厂商私有 HTTPDNS
 //DOMAIN-KEYWORD,dns,REJECT,extended-matching
