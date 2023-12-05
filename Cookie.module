@@ -39,6 +39,10 @@ IT之家 = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\
 # > 托迈酷客 复游度假生活小程序获取
 托迈酷客 = type=http-request,pattern=^https:\/\/apis\.folidaymall\.com\/online\/capi\/uc\/getCount,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js
 
+# > 云闪付 app获取
+银联获取 = type=http-response, pattern=^https:\/\/youhui.95516.com\/newsign\/api\/sharing_power\/showUserTask, requires-body=1, script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js
+
+
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, *.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, user-api.smzdm.com,  xmc.ximalaya.com, auth.aliyundrive.com, my.ruanmei.com, apis.folidaymall.com
+hostname = %APPEND% api.m.jd.com, *.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, user-api.smzdm.com,  xmc.ximalaya.com, auth.aliyundrive.com, my.ruanmei.com, apis.folidaymall.com,  youhui.95516.com
