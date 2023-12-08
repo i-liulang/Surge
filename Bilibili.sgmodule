@@ -1,6 +1,6 @@
 #!name = 哔哩哔哩去广告
 #!desc = 过滤Bilibili广告、移除青少年模式弹窗和交互式弹幕、移除无用功能
-#!update = 2023-11-16
+#!update = 2023-12-08
 
 [URL Rewrite]
 # 首页 DefaultWord,推荐,热搜发现,右上角活动,标签页,观影页,直播,直播间商品广告浮窗
@@ -11,6 +11,7 @@
 ^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? - reject
 # IP请求 //api.bilibili.com
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+
 
 [Map Local]
 # 去除直播广告
@@ -29,7 +30,6 @@
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
 
 
 [Script]
