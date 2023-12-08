@@ -2,16 +2,13 @@
 #!desc = 过滤Bilibili广告、移除青少年模式弹窗和交互式弹幕、移除无用功能
 #!update = 2023-11-16
 
-[Rule]
-# 放行规则
-DOMAIN, mall.bilibili.com, DIRECT
-DOMAIN, passport.bilibili.com, DIRECT
-
 [URL Rewrite]
 # 首页 DefaultWord,推荐,热搜发现,右上角活动,标签页,观影页,直播,直播间商品广告浮窗
 ^https:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ - reject
 # 开屏广告 //app.bilibili.com
+^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH - reject
 ^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH - reject
+^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? - reject
 # IP请求 //api.bilibili.com
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
 
