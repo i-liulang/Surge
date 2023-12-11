@@ -1,12 +1,8 @@
 #!name=移除广告
-#!desc=更新时间 2023-12-10
+#!desc=更新时间 2023-12-11
 #!system=ios
 
 [Rule]
-# > 屏蔽多数厂商私有 HTTPDNS
-//DOMAIN-KEYWORD,dns,REJECT,extended-matching
-# > 屏蔽B站
-//URL-REGEX,^http:\/\/.*\/resolve\?host=.*$,REJECT
 # > 视频服务器分流
 DOMAIN-KEYWORD,yuheng,𝗗𝗜𝗥𝗘𝗖𝗧
 IP-CIDR,172.233.81.206/32,𝗗𝗜𝗥𝗘𝗖𝗧,no-resolve
@@ -25,7 +21,9 @@ DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
 # > Boxjs 代理
 DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗥𝗢𝗫𝗬
 # > Sub-Store 代理
-DOMAIN-KEYWORD,vercel.app,𝗣𝗥𝗢𝗫𝗬
+DOMAIN,sub-store.vercel.app,𝗣𝗥𝗢𝗫𝗬
+# > Script-Hub 代理
+DOMAIN,scripthub.vercel.app,𝗣𝗥𝗢𝗫𝗬
 # > 心动源代理
 DOMAIN-SUFFIX,applehub.cn,𝗣𝗥𝗢𝗫𝗬
 # > Siri与搜索 代理
