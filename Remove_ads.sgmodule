@@ -4,8 +4,8 @@
 
 [Rule]
 # > 视频服务器分流
-DOMAIN-KEYWORD,yuheng,𝗗𝗜𝗥𝗘𝗖𝗧
-IP-CIDR,172.233.81.206/32,𝗗𝗜𝗥𝗘𝗖𝗧,no-resolve
+DOMAIN-KEYWORD, yuheng, 𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-KEYWORD, yqc-premium, 𝗗𝗜𝗥𝗘𝗖𝗧
 # > 微信消息
 DOMAIN-SUFFIX,weixin.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧,extended-matching
 # > 广告联盟
