@@ -18,6 +18,8 @@ DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
 DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
 DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
+# Speedtest
+DOMAIN-SUFFIX, ad.gt, REJECT
 # > Boxjs 代理
 DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗥𝗢𝗫𝗬
 # > Sub-Store 代理
