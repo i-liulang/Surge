@@ -41,7 +41,6 @@ DOMAIN-SUFFIX, u3.ucweb.com, REJECT
 DOMAIN-KEYWORD, safebrowsing., REJECT
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
-DOMAIN,zh.mk,𝗣𝗥𝗢𝗫𝗬
 # > 爱奇艺 去广告
 DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
 # > 优酷 去广告
@@ -67,7 +66,10 @@ OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0
 # > 交管12123 去广告
 URL-REGEX,^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$,REJECT
 # > 云闪付 去广告
-URL-REGEX,^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long,REJECT
+DOMAIN, ads.95516.com, REJECT
+DOMAIN, switch.cup.com.cn, REJECT
+DOMAIN, tysdk.95516.com, REJECT
+//URL-REGEX,^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long,REJECT
 # > IT之家 去广告
 URL-REGEX,^https:\/\/api\.zuihuimai\.com,REJECT
 # > 美团 去广告
@@ -112,6 +114,10 @@ URL-REGEX,^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allres
 # > 淘票票开屏
 URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.(queryadvertise|queryloadingbanner)\/, REJECT
 # > 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+DOMAIN, ossgw.alicdn.com, REJECT
+DOMAIN, ems.youku.com, REJECT
+DOMAIN, hudong.alicdn.com, REJECT
+DOMAIN-SUFFIX, ut.taobao.com, REJECT
 URL-REGEX,^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv, REJECT
 URL-REGEX,^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise, REJECT
 URL-REGEX,^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit, REJECT
@@ -126,7 +132,8 @@ URL-REGEX,^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.second
 # > 萤石云
 URL-REGEX,^https?:\/\/i\.ys7\.com\/api\/ads\/, REJECT
 # > 建设银行
-URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
+DOMAIN-KEYWORD, adv.ccb.com, REJECT
+//URL-REGEX,^http:\/\/imageadv\.ccb\.com\/adpic\/nctm\/ad\.png,REJECT
 # > 饿了么 去广告
 URL-REGEX,^https?:\/\/elemecdn.com\/.+\/sitemap,REJECT
 URL-REGEX,^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4},REJECT
