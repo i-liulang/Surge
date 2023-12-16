@@ -1,5 +1,5 @@
 #!name=移除广告
-#!desc=更新时间 2023-12-11
+#!desc=更新时间 2023-12-16
 #!system=ios
 
 [Rule]
@@ -48,8 +48,7 @@ DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
 DOMAIN, iyes.youku.com,REJECT
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 # > 京东 去广告
-//URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT
-URL-REGEX,^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend),REJECT
+URL-REGEX,^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]),REJECT
 #  > 京东极速版 去广告
 URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT-TINYGIF
 URL-REGEX,^https:\/\/img11.360buyimg.com\/dl\/jfs\/t1\/195304\/29\/12317\/268480\/60e6fd21E02a8fb2a\/,REJECT-TINYGIF
