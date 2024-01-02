@@ -109,7 +109,7 @@ URL-REGEX,^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list,REJE
 URL-REGEX,^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input,REJECT
 URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/(fb\/st\?logtype|(notiv3|cellloc_noti|noti_cloudswitch_noti)\/info),REJECT
 # > 航旅纵横 *.umetrip.com, 
-URL-REGEX,^http?:\/\/(flightstatus|home|umerp|discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native, REJECT
+URL-REGEX,^http?:\/\/(flightstatus|home|umerp|discardrp)\.umetrip\.com\/gateway\/api\/umetrip\/native, REJECT
 # > KFC开屏广告
 URL-REGEX,^https:\/\/res\.kfc\.com\.cn\/advertisement, REJECT
 URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\?, REJECT
