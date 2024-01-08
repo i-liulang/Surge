@@ -43,9 +43,6 @@ JAVDB会员 = type=http-request,pattern=^https:\/\/(api\.hechuangxinxi\.xyz|jdfo
 YouTube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting),requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.beta.js
 # > Nicegram 解锁
 Nicegram = type=http-response,pattern=https://nicegram.cloud/api/v6/user/info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nicegram.js
-# > VVebo 用户主页修复
-微博主页 = type=http-request, pattern=^https:\/\/api\.weibo\.cn\/2\/(users\/show\?|statuses\/user_timeline\?), requires-body=0, timeout=5, script-path=https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js
-微博主页 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\?, requires-body=1, timeout=5, script-path=https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js
 # > Adguard Pro *api.adguard.com
 //Adguard = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.com\/api\/.+\/ios_validate_receipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/adguard.js,script-update-interval=-1
 # > Gear Pro   greasyfork.org,
@@ -55,5 +52,5 @@ Nicegram = type=http-response,pattern=https://nicegram.cloud/api/v6/user/info,re
 
 
 [MITM]
-hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, spclient.wg.spotify.com, biz.cyapi.cn, wrapper.cyapi.cn, adx.sogaha.cn, youtubei.googleapis.com, api.weibo.cn, nicegram.cloud, *api.adguard.com, pan.baidu.com
+hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, spclient.wg.spotify.com, biz.cyapi.cn, wrapper.cyapi.cn, adx.sogaha.cn, youtubei.googleapis.com, nicegram.cloud, *api.adguard.com, pan.baidu.com
 
