@@ -55,5 +55,5 @@ Nicegram = type=http-response,pattern=https://nicegram.cloud/api/v6/user/info,re
 
 
 [MITM]
-hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, spclient.wg.spotify.com, biz.cyapi.cn, wrapper.cyapi.cn, adx.sogaha.cn, youtubei.googleapis.com, nicegram.cloud, *api.adguard.com, pan.baidu.com
+hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, spclient.wg.spotify.com, biz.cyapi.cn, wrapper.cyapi.cn, adx.sogaha.cn, youtubei.googleapis.com, api.weibo.cn, nicegram.cloud, *api.adguard.com, pan.baidu.com
 
