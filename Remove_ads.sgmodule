@@ -116,7 +116,8 @@ URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\?, REJE
 URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome, REJECT
 # 招行掌上生活 (需卸载重装)
 # 开屏广告 az*mbasecc.bas.cmbchina.com
-URL-REGEX,^https:\/\/az\dmbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec, REJECT
+#URL-REGEX,^https:\/\/az\dmbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec, REJECT
+URL-REGEX,^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec, REJECT
 #设置栏目内广告 intellicc.bas.cmbchina.com
 URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec, REJECT
 # > 飞猪去开屏广告
@@ -186,5 +187,5 @@ URL-REGEX,^https?:\/\/www1\.elecfans\.com\/www\/delivery\/,REJECT
 http-request ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
 
 [MITM]
-hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, m.ctrip.com, capis(-\d)?.didapinche.com, conf.diditaxi.com.cn, adx-cn.anythinktech.com, creditcardapp.bankcomm.cn, mime.baidu.com, mbd.baidu.com, *.umetrip.com, res.kfc.com.cn, az*mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, imageadv.ccb.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, nr-op.elemecdn.com, www1.elecfans.com, mp.weixin.qq.com, 180.76.76.200, newclient.map.baidu.com, httpdns.baidubce.com, apapia-sqk.manmanbuy.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com, poplayer.template.alibaba.com, security.wechat.com, weixin110.qq.com, ad.12306.cn,
+hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, m.ctrip.com, capis(-\d)?.didapinche.com, conf.diditaxi.com.cn, adx-cn.anythinktech.com, creditcardapp.bankcomm.cn, mime.baidu.com, mbd.baidu.com, *.umetrip.com, res.kfc.com.cn, az*mbasecc.bas.cmbchina.com, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, imageadv.ccb.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, nr-op.elemecdn.com, www1.elecfans.com, mp.weixin.qq.com, 180.76.76.200, newclient.map.baidu.com, httpdns.baidubce.com, apapia-sqk.manmanbuy.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com, poplayer.template.alibaba.com, security.wechat.com, weixin110.qq.com, ad.12306.cn,
 
