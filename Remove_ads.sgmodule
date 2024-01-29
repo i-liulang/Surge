@@ -1,5 +1,5 @@
 #!name=移除广告
-#!desc=更新时间 2024-01-26
+#!desc=更新时间 2024-01-29
 #!system=ios
 
 [Rule]
@@ -119,6 +119,8 @@ URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome, REJECT
 URL-REGEX,^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec, REJECT
 #设置栏目内广告 intellicc.bas.cmbchina.com
 URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec, REJECT
+# 首页随机弹窗
+URL-REGEX,^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId, REJECT
 # > 飞猪去开屏广告
 URL-REGEX,^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) ,REJECT
 # > 淘票票开屏
