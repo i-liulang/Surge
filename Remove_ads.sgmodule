@@ -192,7 +192,7 @@ URL-REGEX,^https:\/\/mobile\.12306\.cn\/otsmobile\/h5\/otsbussiness\/travelPageI
 解除微信链接限制 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js
 # > 12306去广告
 12306去开屏 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, requires-body=true, max-size=-1, timeout=60
-#12306去广告 = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60
+12306去广告 = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60
 
 
 [MITM]
