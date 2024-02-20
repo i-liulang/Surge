@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2024-02-19
+#!desc=更新时间 2024-02-20
 
 [Header Rewrite]
 # > Bing Ai
@@ -16,8 +16,6 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 京东搜索 = type=http-response,requires-body=1,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms),script-path=https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js
 # > 豆瓣电影 搜索
 豆瓣电影 = type=http-response,pattern=^https://m.douban.com/movie/subject/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Douban.js
-# > IT之家 去广告
-ＩＴ之家 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/(napi|api|m)\.ithome\.com\/(api|json)\/(news|topmenu|listpage|newslist|slide)\/(getfeeds|index|slide),script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js,script-update-interval=0
 # > Boxjs
 会话数据 = type=http-request,pattern=https?:\/\/boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 # > SUB订阅管理
@@ -49,5 +47,5 @@ Nicegram = type=http-response,pattern=https://nicegram.cloud/api/v6/user/info,re
 
 
 [MITM]
-hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, api.m.jd.com, m.douban.com, m.ithome.com, api.ithome.com, napi.ithome.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, biz.cyapi.cn, wrapper.cyapi.cn, adx.sogaha.cn, youtubei.googleapis.com, nicegram.cloud, *api.adguard.com, pan.baidu.com
+hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, api.m.jd.com, m.douban.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, biz.cyapi.cn, wrapper.cyapi.cn, adx.sogaha.cn, youtubei.googleapis.com, nicegram.cloud, *api.adguard.com, pan.baidu.com
 
