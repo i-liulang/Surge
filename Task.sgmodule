@@ -36,7 +36,10 @@ iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,timeout=120,script-pa
 托迈酷客 = type=cron,cronexp=30 3 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0,timeout=30
 
 # > 云闪付
-银联闪付 = type=cron,cronexp=30 7 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js,script-update-interval=0,timeout=30
+银联闪付 = type=cron,cronexp=30 7 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js,script-update-interval=0,timeout=30、
+
+# > 摸鱼日历
+摸鱼日历 = type=cron,cronexp=0 0 9 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js,script-update-interval=0,timeout=60
 
 # > 每天60秒读懂世界
 每天60秒读懂世界 = type=cron,cronexp=0 0 10 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js,timeout=60
