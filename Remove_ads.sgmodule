@@ -76,12 +76,10 @@ OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0
 # > 交管12123 去广告
 URL-REGEX,^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$,REJECT
 # > 云闪付 去广告
-DOMAIN, ads.95516.com, REJECT
-DOMAIN, switch.cup.com.cn, REJECT
-DOMAIN, tysdk.95516.com, REJECT
-//URL-REGEX,^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long,REJECT
-# > IT之家 去广告
-URL-REGEX,^https:\/\/api\.zuihuimai\.com,REJECT
+//DOMAIN, ads.95516.com, REJECT
+//DOMAIN, switch.cup.com.cn, REJECT
+//DOMAIN, tysdk.95516.com, REJECT
+URL-REGEX,^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long,REJECT
 # > 美团 去广告
 URL-REGEX,^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg$,REJECT
 URL-REGEX,^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$,REJECT
@@ -184,5 +182,5 @@ URL-REGEX,^https?:\/\/www1\.elecfans\.com\/www\/delivery\/,REJECT
 
 
 [MITM]
-hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, wallet.95516.com, api.zuihuimai.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, m.ctrip.com, capis(-\d)?.didapinche.com, conf.diditaxi.com.cn, adx-cn.anythinktech.com, creditcardapp.bankcomm.cn, *.umetrip.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, imageadv.ccb.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, nr-op.elemecdn.com, www1.elecfans.com, mp.weixin.qq.com, 180.76.76.200, newclient.map.baidu.com, httpdns.baidubce.com, apapia-sqk.manmanbuy.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com, poplayer.template.alibaba.com, security.wechat.com, weixin110.qq.com, ad.12306.cn, mobile.12306.cn,
+hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, wallet.95516.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, m.ctrip.com, capis(-\d)?.didapinche.com, conf.diditaxi.com.cn, adx-cn.anythinktech.com, creditcardapp.bankcomm.cn, *.umetrip.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, imageadv.ccb.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, nr-op.elemecdn.com, www1.elecfans.com, mp.weixin.qq.com, 180.76.76.200, newclient.map.baidu.com, httpdns.baidubce.com, apapia-sqk.manmanbuy.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com, poplayer.template.alibaba.com, security.wechat.com, weixin110.qq.com, ad.12306.cn, mobile.12306.cn,
 
