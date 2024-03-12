@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2024-03-11
+#!desc=更新时间 2024-03-12
 
 
 [Header Rewrite]
@@ -15,8 +15,8 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 # > 京东App 历史价格 
 京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
 京东搜索 = type=http-response,requires-body=1,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms),script-path=https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js
-# > 豆瓣电影 搜索
-豆瓣电影 = type=http-response,pattern=^https://m.douban.com/movie/subject/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Douban.js
+# > TF 账户管理
+内测管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,timeout=120,engine=jsc
 # > Boxjs
 会话数据 = type=http-request,pattern=https?:\/\/boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 # > SUB订阅管理
@@ -46,5 +46,5 @@ Nicegram = type=http-response,pattern=https://nicegram.cloud/api/v6/user/info,re
 
 
 [MITM]
-hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, api.m.jd.com, m.douban.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, biz.cyapi.cn, wrapper.cyapi.cn, adx.sogaha.cn, nicegram.cloud, *api.adguard.com, pan.baidu.com
+hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, api.m.jd.com, testflight.apple.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, biz.cyapi.cn, wrapper.cyapi.cn, adx.sogaha.cn, nicegram.cloud, *api.adguard.com, pan.baidu.com
 
