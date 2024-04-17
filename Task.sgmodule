@@ -1,5 +1,5 @@
 #!name=定时脚本
-#!desc=最后更新时间 2024-03-30
+#!desc=最后更新时间 2024-04-17
 #!system=ios
 
 [Script]
@@ -40,6 +40,9 @@ iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,timeout=120,script-pa
 
 # > 益禾堂
 益禾堂签到 = type=cron, cronexp="30 9 0 * * *", script-path=https://gist.githubusercontent.com/Sliverkiss/df5dbbf01bc3acc3bccaf7880acd242b/raw/yht.js, timeout=300
+
+# > 4K 世界论坛 web获取
+电影世界 = type=cron,cronexp=0 9 5 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/4ksj.js,script-update-interval=0,timeout=60
 
 # > 每天60秒读懂世界0
 每天60秒读懂世界 = type=cron,cronexp=0 0 10 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js,timeout=60
