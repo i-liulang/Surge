@@ -41,10 +41,14 @@ IT之家 = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\
 # > 云闪付 app获取
 银联获取 = type=http-response, pattern=^https:\/\/youhui.95516.com\/newsign\/api\/sharing_power\/showUserTask, requires-body=1, script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js
 
-# > 益禾堂 小程序获取
-益禾堂获取 = type=http-request, pattern=^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info, script-path=https://gist.githubusercontent.com/Sliverkiss/df5dbbf01bc3acc3bccaf7880acd242b/raw/yht.js, timeout=10
+# > 奶茶签到 小程序获取
+奶茶签到 = type=http-response, pattern= ^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp), script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=1, timeout=60
+奶茶签到 = type=http-request, pattern= ^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign), script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=1, timeout=60
+
+# > 巴士论坛
+巴士论坛获取Cookie = type=http-request ^https?:\/\/www\.javbus\.com\/forum\/home.php\?mod=,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javbus.js
 
 
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,  perf.m.jd.com, *.bilibili.com, passport.iqiyi.com, user-api.smzdm.com,  xmc.ximalaya.com, auth.alipan.com, aliyundrive.alipan.com, my.ruanmei.com, apis.folidaymall.com, youhui.95516.com, qmwebapi.qmai.cn, webapi.qmai.cn
+hostname = %APPEND% api.m.jd.com,  perf.m.jd.com, *.bilibili.com, passport.iqiyi.com, user-api.smzdm.com,  xmc.ximalaya.com, auth.alipan.com, aliyundrive.alipan.com, my.ruanmei.com, apis.folidaymall.com, youhui.95516.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, www.javbus.com
