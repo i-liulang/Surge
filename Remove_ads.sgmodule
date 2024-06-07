@@ -1,5 +1,5 @@
 #!name=移除广告
-#!desc=更新时间 2024-04-30
+#!desc=更新时间 2024-06-07
 #!system=ios
 
 [Rule]
@@ -63,6 +63,7 @@ URL-REGEX,^https:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show$,REJECT
 URL-REGEX,^http:\/\/m\.360buyimg\.com\/deliveryadmin\/jfs\/t1,REJECT
 #  > 京东金融 去广告
 URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture,REJECT
+URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/(new)?na\/m\/adInfo ,REJECT
 # > 京东读书去开屏
 URL-REGEX,https://jdread-api.jd.com/jdread/api/channel/module/opens,REJECT
 URL-REGEX,https://jdread-api.jd.com/jdread/api/popup,REJECT
@@ -88,8 +89,9 @@ URL-REGEX,^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/(infoCenterAd|yesList),REJE
 URL-REGEX,^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic,REJECT
 URL-REGEX,^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig,REJECT
 # > 订票助手
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds,REJECT
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList,REJECT
+URL-REGEX,^https?:\/\/m\.ctrip\.com\/html5\/webresource\/js\/iscroll\.js$ ,REJECT
+URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds ,REJECT
+URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList ,REJECT
 # > 嘀嗒出行
 URL-REGEX,^https:\/\/capis(-\d)?\.didapinche\.com\/adbase,REJECT
 URL-REGEX,^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core⺁,REJECT
