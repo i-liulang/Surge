@@ -23,6 +23,11 @@ DOMAIN,gslbtx.ximalaya.com,REJECT
 # > 爱奇艺 登陆 https://m.iqiyi.com/user.html
 iQIYI获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
+# > 腾讯视频
+腾讯视频 = type=http-request,pattern=https://vip.video.qq.com/rpc/trpc.new_task_system.task_system.TaskSystem/ReadTaskList? ,script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/tenvideo.js
+腾讯视频 = type=http-request,pattern=https://pbaccess.video.qq.com/trpc.videosearch.hot_rank.HotRankServantHttp/HotRankHttp ,script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/tenvideo.js
+腾讯视频 = type=http-request,pattern=https://pbaccess.video.qq.com/trpc.video_account_login.web_login_trpc.WebLoginTrpc/NewRefresh ,script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/tenvideo.js
+
 # > 什么值得买 app获取
 什么值买 = type=http-request,pattern=^https?:\/\/user-api\.smzdm\.com\/checkin$,requires-body=false,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js
 
@@ -51,4 +56,4 @@ IT之家 = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\
 
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,  perf.m.jd.com, *.bilibili.com, passport.iqiyi.com, user-api.smzdm.com,  xmc.ximalaya.com, auth.alipan.com, aliyundrive.alipan.com, my.ruanmei.com, apis.folidaymall.com, youhui.95516.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, www.javbus.com
+hostname = %APPEND% api.m.jd.com,  perf.m.jd.com, *.bilibili.com, passport.iqiyi.com, vip.video.qq.com, pbaccess.video.qq.com, user-api.smzdm.com,  xmc.ximalaya.com, auth.alipan.com, aliyundrive.alipan.com, my.ruanmei.com, apis.folidaymall.com, youhui.95516.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, www.javbus.com
