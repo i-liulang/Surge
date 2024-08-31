@@ -1,5 +1,5 @@
 #!name=定时脚本
-#!desc=最后更新时间 2024-07-26
+#!desc=最后更新时间 2024-08-31
 #!system=ios
 
 [Script]
@@ -22,6 +22,9 @@ B站Cookie(APP) = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/r
 
 # > 爱奇艺
 iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0
+
+# > 腾讯视频
+腾讯视频 = type=cron,cronexp=30 5 0 * * *,wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/tenvideo.js,script-update-interval=0
 
 # > 威锋论坛
 威锋论坛 = type=cron,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/weifeng.js,cronexp=30 6 0 * * *,wake-system=1,timeout=15,script-update-interval=0
