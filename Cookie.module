@@ -24,9 +24,9 @@ DOMAIN,gslbtx.ximalaya.com,REJECT
 iQIYI获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 # > 腾讯视频
-腾讯视频 = type=http-request,pattern=https://vip.video.qq.com/rpc/trpc.new_task_system.task_system.TaskSystem/ReadTaskList? ,script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/tenvideo.js
-腾讯视频 = type=http-request,pattern=https://pbaccess.video.qq.com/trpc.videosearch.hot_rank.HotRankServantHttp/HotRankHttp ,script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/tenvideo.js
-腾讯视频 = type=http-request,pattern=https://pbaccess.video.qq.com/trpc.video_account_login.web_login_trpc.WebLoginTrpc/NewRefresh ,script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/tenvideo.js
+腾讯视频Cookie1 = type=http-request, pattern=https://vip.video.qq.com/rpc/trpc.new_task_system.task_system.TaskSystem/ReadTaskList?, script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/videoqq.js, timeout=60
+腾讯视频Cookie2 = type=http-request, pattern=https://pbaccess.video.qq.com/trpc.videosearch.hot_rank.HotRankServantHttp/HotRankHttp, script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/videoqq.js, timeout=60
+腾讯视频Cookie3 = type=http-request, pattern=https://pbaccess.video.qq.com/trpc.video_account_login.web_login_trpc.WebLoginTrpc/NewRefresh, script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/videoqq.js, requires-body=true, max-size=-1, timeout=60
 
 # > 什么值得买 app获取
 什么值买 = type=http-request,pattern=^https?:\/\/user-api\.smzdm\.com\/checkin$,requires-body=false,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js
