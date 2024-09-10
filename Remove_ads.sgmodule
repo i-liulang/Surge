@@ -1,27 +1,10 @@
 #!name=移除广告
-#!desc=更新时间 2024-09-06
+#!desc=更新时间 2024-09-10
 #!system=ios
 
 [Rule]
 # > 微信消息
 DOMAIN-SUFFIX,weixin.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧,extended-matching
-# > 广告联盟
-DOMAIN, ad.zijieapi.com, REJECT
-DOMAIN, i.snssdk.com, REJECT
-DOMAIN, is.snssdk.com, REJECT
-DOMAIN, mazu.m.qq.com, REJECT
-DOMAIN, sdk.e.qq.com, REJECT
-DOMAIN, open.e.kuaishou.com, REJECT
-DOMAIN-SUFFIX, miaozhen.com, REJECT
-DOMAIN-SUFFIX, union.baidu.cn, REJECT
-DOMAIN-SUFFIX, union.baidu.com, REJECT
-DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
-DOMAIN-KEYWORD, -tos.pstatp.com, REJECT
-DOMAIN-KEYWORD, asiad.byteactivity, REJECT
-DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
-DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
-DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
-DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
 # Speedtest
 DOMAIN-SUFFIX, ad.gt, REJECT
 # > Boxjs 代理
@@ -38,9 +21,6 @@ PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCSe
 DOMAIN,lookup-api.apple.com,𝗣𝗥𝗢𝗫𝗬
 DOMAIN,lookup-api.apple.com.edgekey.net,𝗣𝗥𝗢𝗫𝗬
 DOMAIN,e16991.b.akamaiedge.net,𝗣𝗥𝗢𝗫𝗬
-# > 通用广告
-DOMAIN-SUFFIX, doubleclick-cn.net, REJECT
-DOMAIN-SUFFIX, doubleclick.net, REJECT
 # > 安全浏览限制解除
 DOMAIN, lookup.api.bsb.baidu.com, REJECT
 DOMAIN-SUFFIX, u3.ucweb.com, REJECT
@@ -88,17 +68,6 @@ URL-REGEX,^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/(infoCenterAd|yesList),REJE
 # > 招商银行
 URL-REGEX,^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic,REJECT
 URL-REGEX,^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig,REJECT
-# > 订票助手
-URL-REGEX,^https:\/\/m\.ctrip\.com\/restapi\/soa2\/12673\/queryWeChatHotEvent ,REJECT
-URL-REGEX,^https:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/tripAds ,REJECT
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/html5\/webresource\/js\/iscroll\.js$ ,REJECT
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds ,REJECT
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList ,REJECT
-URL-REGEX,^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif ,REJECT
-# > 嘀嗒出行
-URL-REGEX,^https:\/\/capis(-\d)?\.didapinche\.com\/adbase,REJECT
-URL-REGEX,^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core⺁,REJECT
-URL-REGEX,^https?:\/\/adx-cn\.anythinktech\.com\/bid,REJECT
 # > 买单吧
 URL-REGEX,^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do ,REJECT
 # > 航旅纵横 *.umetrip.com, 
@@ -171,8 +140,6 @@ URL-REGEX,^https?:\/\/www1\.elecfans\.com\/www\/delivery\/,REJECT
 
 
 [Script]
-# > 广告联盟
-广告联盟json = type=http-response,pattern=^https:\/\/((api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js
 # > 淘宝去开屏广告
 淘宝开屏 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 淘宝开屏 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
@@ -186,5 +153,5 @@ URL-REGEX,^https?:\/\/www1\.elecfans\.com\/www\/delivery\/,REJECT
 
 
 [MITM]
-hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, wallet.95516.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, *.ctrip.com, capis(-\d)?.didapinche.com, conf.diditaxi.com.cn, adx-cn.anythinktech.com, creditcardapp.bankcomm.cn, *.umetrip.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, imageadv.ccb.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, nr-op.elemecdn.com, www1.elecfans.com, lchttpapi.xczim.com, mp.weixin.qq.com, 180.76.76.200, newclient.map.baidu.com, httpdns.baidubce.com, apapia-sqk.manmanbuy.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com, poplayer.template.alibaba.com, security.wechat.com, weixin110.qq.com, ad.12306.cn, mobile.12306.cn,
+hostname = %APPEND% *.360buyimg.com, ms.jr.jd.com, jdread-api.jd.com, ossgw.alicdn.com, gab.122.gov.cn, wallet.95516.com, flowplus.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, api.wfdata.club, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, creditcardapp.bankcomm.cn, *.umetrip.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, i.ys7.com, imageadv.ccb.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, nr-op.elemecdn.com, www1.elecfans.com, lchttpapi.xczim.com, mp.weixin.qq.com, 180.76.76.200, newclient.map.baidu.com, httpdns.baidubce.com, apapia-sqk.manmanbuy.com, mi.gdt.qq.com, open.e.kuaishou.com, imageadv.ccb.com, poplayer.template.alibaba.com, security.wechat.com, weixin110.qq.com, ad.12306.cn, mobile.12306.cn,
 
