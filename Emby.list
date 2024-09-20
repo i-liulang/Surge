@@ -21,15 +21,6 @@ DOMAIN,servers.xeton.dev
 DOMAIN,cf.jmsooo.com
 DOMAIN,ha.jmsooo.com
 
-# > 流媒体masakaf服务器
-DOMAIN,emby.aca.best
-DOMAIN,porn.aca.best
-
-# > 流媒体masakaf服务器
-DOMAIN,aaa.ax
-DOMAIN,us.aaa.ax
-DOMAIN,jp.aaa.ax 
-
 # > 流媒体Polo服务器
 DOMAIN,df.poloemby.xyz
 DOMAIN,cu.poloemby.xyz
@@ -75,5 +66,9 @@ DOMAIN,two.mulgore.net
 # > 流媒体TreeDiagram服务器
 DOMAIN,789.123456.al 
 
-# > 流媒体ENET服务器
+# > 流媒体MisakaF服务器
 DOMAIN,easyemby.com 
+
+# > 流媒体hxd服务器
+DOMAIN,hxd.as174.com
+DOMAIN,emby.as174.com
