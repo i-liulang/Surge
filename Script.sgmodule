@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2024-09-18
+#!desc=更新时间 2024-09-20
 
 
 [Header Rewrite]
@@ -12,9 +12,6 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 [Script]
 # > 扫描全能王 pro
 扫描全能王 = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
-# > 京东App 历史价格 
-京东比价 = type=http-response,requires-body=1,pattern=^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js
-京东搜索 = type=http-response,requires-body=1,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms),script-path=https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js
 # > Boxjs
 会话数据 = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 # > Sub-Store 订阅管理
@@ -40,5 +37,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 
 
 [MITM]
-hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, api.m.jd.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, pan.baidu.com
+hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, pan.baidu.com
 
