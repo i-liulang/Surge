@@ -1,15 +1,54 @@
 #!name=脚本合集
-#!desc=更新时间 2024-09-20
+#!desc=更新时间 2024-09-28
 
 
 [Header Rewrite]
 # > Bing Ai
 ^https:\/\/www\.bing\.com\/search header-replace User-Agent "Mozilla/5.0 (iphone; Intel Mac OS X 10_12_6) AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
 
+[Rule]
+# > 微信消息
+DOMAIN-SUFFIX,weixin.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧,extended-matching
+# Speedtest
+DOMAIN-SUFFIX, ad.gt, REJECT
+# > Boxjs 代理
+DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗥𝗢𝗫𝗬
+# > Sub-Store 代理
+DOMAIN,sub-store.vercel.app,𝗣𝗥𝗢𝗫𝗬
+# > Script-Hub 代理
+DOMAIN,scripthub.vercel.app,𝗣𝗥𝗢𝗫𝗬
+# > 心动源代理
+DOMAIN-SUFFIX,applehub.cn,𝗣𝗥𝗢𝗫𝗬
+# > Siri与搜索 代理
+PROCESS-NAME,LookupViewService,𝗣𝗥𝗢𝗫𝗬
+PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService,𝗣𝗥𝗢𝗫𝗬
+DOMAIN,lookup-api.apple.com,𝗣𝗥𝗢𝗫𝗬
+DOMAIN,lookup-api.apple.com.edgekey.net,𝗣𝗥𝗢𝗫𝗬
+DOMAIN,e16991.b.akamaiedge.net,𝗣𝗥𝗢𝗫𝗬
+# > 安全浏览限制解除
+DOMAIN, lookup.api.bsb.baidu.com, REJECT
+DOMAIN-SUFFIX, u3.ucweb.com, REJECT
+DOMAIN-KEYWORD, safebrowsing., REJECT
+# > Safari 防跳转
+DOMAIN,app-site-association.cdn-apple.com,REJECT
+# > KFC开屏广告
+URL-REGEX,^https:\/\/res\.kfc\.com\.cn\/advertisement, REJECT
+URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\?, REJECT
+URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome, REJECT
+# 招行掌上生活 (需卸载重装)
+# 开屏广告 mbasecc.bas.cmbchina.com
+URL-REGEX,^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec, REJECT
+#设置栏目内广告 intellicc.bas.cmbchina.com
+URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec, REJECT
+# 首页随机弹窗
+URL-REGEX,^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId, REJECT
+
 [General]
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 
 [Script]
+# > 解除微信链接限制
+解除微信链接限制 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
 # > 扫描全能王 pro
 扫描全能王 = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
 # > Boxjs
@@ -37,5 +76,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 
 
 [MITM]
-hostname = %APPEND% www.bing.com,*.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, pan.baidu.com
+hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, pan.baidu.com
 
