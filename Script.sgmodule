@@ -6,25 +6,24 @@
 # > Bing Ai
 ^https:\/\/www\.bing\.com\/search header-replace User-Agent "Mozilla/5.0 (iphone; Intel Mac OS X 10_12_6) AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
 
+
+[General]
+force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+
+
 [Rule]
 # > 微信消息
 DOMAIN-SUFFIX,weixin.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧,extended-matching
 # Speedtest
 DOMAIN-SUFFIX, ad.gt, REJECT
 # > Boxjs 代理
-DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗥𝗢𝗫𝗬
+DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗿𝗼𝘅𝘆
 # > Sub-Store 代理
-DOMAIN,sub-store.vercel.app,𝗣𝗥𝗢𝗫𝗬
+DOMAIN,sub-store.vercel.app,𝗣𝗿𝗼𝘅𝘆
 # > Script-Hub 代理
-DOMAIN,scripthub.vercel.app,𝗣𝗥𝗢𝗫𝗬
+DOMAIN,scripthub.vercel.app,𝗣𝗿𝗼𝘅𝘆
 # > 心动源代理
-DOMAIN-SUFFIX,applehub.cn,𝗣𝗥𝗢𝗫𝗬
-# > Siri与搜索 代理
-PROCESS-NAME,LookupViewService,𝗣𝗥𝗢𝗫𝗬
-PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,lookup-api.apple.com,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,lookup-api.apple.com.edgekey.net,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,e16991.b.akamaiedge.net,𝗣𝗥𝗢𝗫𝗬
+DOMAIN-SUFFIX,applehub.cn,𝗣𝗿𝗼𝘅𝘆
 # > 安全浏览限制解除
 DOMAIN, lookup.api.bsb.baidu.com, REJECT
 DOMAIN-SUFFIX, u3.ucweb.com, REJECT
@@ -49,9 +48,6 @@ URL-REGEX,^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.
 URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec, REJECT
 # 首页随机弹窗
 URL-REGEX,^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId, REJECT
-
-[General]
-force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 
 [Script]
 # > 解除微信链接限制
