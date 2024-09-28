@@ -31,6 +31,13 @@ DOMAIN-SUFFIX, u3.ucweb.com, REJECT
 DOMAIN-KEYWORD, safebrowsing., REJECT
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
+# 工商银行
+DOMAIN, pageviewp.icbc.com.cn, REJECT
+DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT
+# 微信
+DOMAIN, badjs.weixinbridge.com, REJECT
+DOMAIN, dns.weixin.qq.com.cn, REJECT
+DOMAIN-SUFFIX, wxs.qq.com, REJECT
 # > KFC开屏广告
 URL-REGEX,^https:\/\/res\.kfc\.com\.cn\/advertisement, REJECT
 URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\?, REJECT
