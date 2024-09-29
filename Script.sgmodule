@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2024-09-28
+#!desc=更新时间 2024-09-29
 
 
 [Header Rewrite]
@@ -14,7 +14,10 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 [Rule]
 # > 微信消息
 DOMAIN-SUFFIX,weixin.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧,extended-matching
-# Speedtest
+DOMAIN, badjs.weixinbridge.com, REJECT
+DOMAIN, dns.weixin.qq.com.cn, REJECT
+DOMAIN-SUFFIX, wxs.qq.com, REJECT
+# > Speedtest
 DOMAIN-SUFFIX, ad.gt, REJECT
 # > Boxjs 代理
 DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗿𝗼𝘅𝘆
@@ -33,25 +36,28 @@ DOMAIN,app-site-association.cdn-apple.com,REJECT
 # 工商银行
 DOMAIN, pageviewp.icbc.com.cn, REJECT
 DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT
-# 微信
-DOMAIN, badjs.weixinbridge.com, REJECT
-DOMAIN, dns.weixin.qq.com.cn, REJECT
-DOMAIN-SUFFIX, wxs.qq.com, REJECT
 # > KFC开屏广告
 URL-REGEX,^https:\/\/res\.kfc\.com\.cn\/advertisement, REJECT
 URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\?, REJECT
 URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome, REJECT
-# 招行掌上生活 (需卸载重装)
+# > 招行掌上生活 (需卸载重装)
 # 开屏广告 mbasecc.bas.cmbchina.com
 URL-REGEX,^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec, REJECT
 #设置栏目内广告 intellicc.bas.cmbchina.com
 URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec, REJECT
 # 首页随机弹窗
 URL-REGEX,^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId, REJECT
+# > QQ音乐
+URL-REGEX,^https?:\/\/us\.l\.qq\.com\/exapp, REJECT
+URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/, REJECT
+URL-REGEX,^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/, REJECT
+URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg, REJECT
+URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads, REJECT
+URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/, REJECT
 
 [Script]
 # > 解除微信链接限制
-解除微信链接限制 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
+解除微信链接限制 = type=http-response,pattern=^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/wechat/unlockUrls.js
 # > 扫描全能王 pro
 扫描全能王 = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
 # > Boxjs
@@ -63,10 +69,8 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 # > 奈飞评分
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
-# > 阿里云盘净化
-阿里云盘= type=^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js
 # > JavDB 
-JavDB = type=http-response,pattern=^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+),script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, script-update-interval=0
+JavDB = type=http-response,pattern=^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+),script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, script-update-interval=0
 # > 彩云天气 解锁
 去除活动 = type=http-response,pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
 去除助手 = type=http-response,pattern=^https:\/\/api\.caiyunapp\.com\/v1\/activity\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
@@ -79,5 +83,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 
 
 [MITM]
-hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.aliyundrive.com, *.alipan.com, api.hechuangxinxi.xyz, jdforrepam.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, pan.baidu.com
+hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, us.l.qq.com, y.gtimg.cn, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.hechuangxinxi.xyz, jdforrepam.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, pan.baidu.com
 
