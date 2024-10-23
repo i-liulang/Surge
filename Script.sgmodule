@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2024-10-22
+#!desc=更新时间 2024-10-23
 
 
 [Header Rewrite]
@@ -54,12 +54,9 @@ URL-REGEX,^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/, REJECT
 URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg, REJECT
 URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads, REJECT
 URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/, REJECT
-
-
-[Map Local]
 # > 智行旅行
-^https:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/tripAds data-type=text data="{}" status-code=200
-^https:\/\/m\.ctrip\.com\/restapi\/soa2\/12673\/queryWeChatHotEvent data-type=text data="{}" status-code=200
+URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds, REJECT
+
 
 
 [Script]
@@ -88,5 +85,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 
 
 [MITM]
-hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, us.l.qq.com, y.gtimg.cn, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com
+hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, us.l.qq.com, y.gtimg.cn, m.ctrip.com，security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com
 
