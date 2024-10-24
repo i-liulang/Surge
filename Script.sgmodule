@@ -55,10 +55,10 @@ URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg
 URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads, REJECT,pre-matching
 URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/, REJECT,pre-matching
 # > 智行旅行
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/html5\/webresource\/js\/iscroll\.js$, REJECT
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds, REJECT
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList, REJECT
-URL-REGEX,^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif, REJECT
+URL-REGEX,^https?:\/\/m\.ctrip\.com\/html5\/webresource\/js\/iscroll\.js$, REJECT,pre-matching
+URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds, REJECT,pre-matching
+URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList, REJECT,pre-matching
+URL-REGEX,^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif, REJECT,pre-matching
 
 [Map Local]
 # > 智行旅行
