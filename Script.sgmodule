@@ -66,8 +66,6 @@ URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds, REJECT,pre-matchin
 扫描全能王 = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
 # > Boxjs
 会话数据 = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
-# > Sub-Store 订阅管理
-订阅管理 = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
 # > Emby 解锁
 EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Emby.js
 # > 奈飞评分
@@ -85,5 +83,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 
 
 [MITM]
-hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, us.l.qq.com, y.gtimg.cn, m.ctrip.com，security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com
+hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, us.l.qq.com, y.gtimg.cn, m.ctrip.com，security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com
 
