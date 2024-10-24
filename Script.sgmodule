@@ -55,15 +55,8 @@ URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg
 URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads, REJECT,pre-matching
 URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/, REJECT,pre-matching
 # > 智行旅行
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/html5\/webresource\/js\/iscroll\.js$, REJECT,pre-matching
 URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds, REJECT,pre-matching
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList, REJECT,pre-matching
-URL-REGEX,^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif, REJECT,pre-matching
 
-[Map Local]
-# > 智行旅行
-^https:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/tripAds data-type=text data="{}" status-code=200
-^https:\/\/m\.ctrip\.com\/restapi\/soa2\/12673\/queryWeChatHotEvent data-type=text data="{}" status-code=200
 
 [Script]
 # > 解除微信链接限制
@@ -89,5 +82,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 
 
 [MITM]
-hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, us.l.qq.com, y.gtimg.cn, *.ctrip.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com
+hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, us.l.qq.com, y.gtimg.cn, m.ctrip.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com
 
