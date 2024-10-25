@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2024-10-24
+#!desc=更新时间 2024-10-25
 
 
 [Header Rewrite]
@@ -36,26 +36,23 @@ DOMAIN,app-site-association.cdn-apple.com,REJECT,pre-matching
 # 工商银行
 DOMAIN, pageviewp.icbc.com.cn, REJECT,pre-matching
 DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT,pre-matching
+
+
+[Map Local]
 # > KFC开屏广告
-URL-REGEX,^https:\/\/res\.kfc\.com\.cn\/advertisement, REJECT,pre-matching
-URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\?, REJECT,pre-matching
-URL-REGEX,^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome, REJECT,pre-matching
+^https:\/\/res\.kfc\.com\.cn\/advertisement data-type=text data="{}" status-code=200
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data-type=text data="{}" status-code=200
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data="{}" status-code=200
 # > 招行掌上生活 (需卸载重装)
 # 开屏广告 mbasecc.bas.cmbchina.com
-URL-REGEX,^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec, REJECT,pre-matching
+^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data-type=text data="{}" status-code=200
 #设置栏目内广告 intellicc.bas.cmbchina.com
-URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec, REJECT,pre-matching
+^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec data-type=text data="{}" status-code=200
 # 首页随机弹窗
-URL-REGEX,^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId, REJECT,pre-matching
-# > QQ音乐
-URL-REGEX,^https?:\/\/us\.l\.qq\.com\/exapp, REJECT
-URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/, REJECT,pre-matching
-URL-REGEX,^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/, REJECT,pre-matching
-URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg, REJECT,pre-matching
-URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads, REJECT,pre-matching
-URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/, REJECT,pre-matching
+^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId data-type=text data="{}" status-code=200
 # > 智行旅行
-URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds, REJECT,pre-matching
+^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds data-type=text data="{}" status-code=200
+
 
 
 [Script]
