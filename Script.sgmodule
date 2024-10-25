@@ -37,8 +37,8 @@ DOMAIN,app-site-association.cdn-apple.com,REJECT,pre-matching
 DOMAIN, pageviewp.icbc.com.cn, REJECT,pre-matching
 DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT,pre-matching
 # > 招行掌上生活 (需卸载重装)
-# 开屏广告
-DOMAIN,res.cc.cmbimg.com, REJECT,pre-matching
+# 开屏广告 mbasecc.bas.cmbchina.com 
+URL-REGEX,^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec, REJECT,pre-matching
 #设置栏目内广告 intellicc.bas.cmbchina.com
 URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec, REJECT,pre-matching 
 # 首页随机弹窗
@@ -77,5 +77,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 
 
 [MITM]
-hostname = %APPEND% www.bing.com, res.kfc.com.cn, intellicc.bas.cmbchina.com, us.l.qq.com, y.gtimg.cn, m.ctrip.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com
+hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, us.l.qq.com, y.gtimg.cn, m.ctrip.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com
 
