@@ -51,7 +51,7 @@ DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT,pre-matching
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data="{}" status-code=200
 # > 招行掌上生活 (需卸载重装)
 # 开屏广告 mbasecc.bas.cmbchina.com 
-^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data-type=text data="{}" status-code=200
+^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data-type=text data=""
 #设置栏目内广告 intellicc.bas.cmbchina.com
 ^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec data-type=text data="{}" status-code=200
 # 首页随机弹窗
