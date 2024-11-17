@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2024-10-26
+#!desc=更新时间 2024-11-17
 
 
 [Header Rewrite]
@@ -12,6 +12,8 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 
 
 [Rule]
+# > TG不转圈
+IP-CIDR,95.161.76.100/31,REJECT,no-resolve,pre-matching
 # > 微信消息
 DOMAIN-SUFFIX,weixin.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧,extended-matching
 DOMAIN, badjs.weixinbridge.com, REJECT,pre-matching
