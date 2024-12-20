@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2024-11-28
+#!desc=更新时间 2024-12-20
 
 
 [Header Rewrite]
@@ -47,6 +47,8 @@ URL-REGEX,^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.
 URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec, REJECT,pre-matching 
 # 首页随机弹窗
 URL-REGEX,^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId, REJECT,pre-matching 
+# > 淘票票
+URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ , REJECT,pre-matching 
 
 [Map Local]
 # > KFC开屏广告
