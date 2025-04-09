@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2025-01-03
+#!desc=更新时间 2025-04-09
 
 
 [Header Rewrite]
@@ -91,7 +91,7 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 # > 京东去广告
 京东广告 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://kelee.one/Resource/Script/JD/JD_remove_ads.js, requires-body=true
 # > 京东比价
-京东比价 = type=http-response, pattern=^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://kelee.one/Resource/Script/JD/JD_Price.js, requires-body=true
+京东比价 = type=http-response, pattern=^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://kelee.one/Resource/Script/JD/JD_Price.js, requires-body=true, timeout=10
 
 [MITM]
 hostname = %APPEND% www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, m.ctrip.com, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com, api.m.jd.com, in.m.jd.com
