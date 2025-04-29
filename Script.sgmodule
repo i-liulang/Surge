@@ -5,8 +5,9 @@
 [Header Rewrite]
 # > Bing Ai
 ^https:\/\/www\.bing\.com\/search header-replace User-Agent "Mozilla/5.0 (iphone; Intel Mac OS X 10_12_6) AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
-# > 解除 Github 429 限制
-http-request (raw|gist).githubusercontent.com header-replace Accept-Language en-us
+# >  解决github速率限制返回429问题
+http-request ^https:\/\/github\.com\/ header-replace Accept-Language en-us
+http-request ^https:\/\/(raw|gist)\.githubusercontent\.com\/ header-replace Accept-Language en-us
 
 [General]
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
