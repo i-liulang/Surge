@@ -72,4 +72,10 @@ DOMAIN,porn.aca.best
 
 # > 流媒体hxd服务器
 DOMAIN,hxd.as174.com
-DOMAIN,emby.as174.com
+DOMAIN,emby.as174.de
+
+# > 流媒体ENET服务器
+DOMAIN,easyemby.com
+DOMAIN,hkt01.easyemby.com
+DOMAIN,hgc01.easyemby.com
+DOMAIN,jp01.easyemby.com
