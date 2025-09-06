@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2025-06-04
+#!desc=更新时间 2025-09-06
 
 
 [Header Rewrite]
@@ -54,14 +54,14 @@ URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.que
 
 
 [Map Local]
-# > KFC开屏广告
-^https:\/\/res\.kfc\.com\.cn\/advertisement data-type=text data="{}" status-code=200
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data-type=text data="{}" status-code=200
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data="{}" status-code=200
 # > 智行旅行
 ^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds data-type=text data="{}" status-code=200
 #  > 京东金融 去广告
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture data-type=text data="{}" status-code=200
+
+[Body Rewrite]
+# KFC开屏
+http-response-jq ^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/apphome.*\.json 'del(.data.app6_bootStrapAd)'
 
 [Script]
 # > 解除微信链接限制
