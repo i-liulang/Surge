@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2025-09-06
+#!desc=更新时间 2025-10-18
 
 
 [Header Rewrite]
@@ -9,6 +9,7 @@
 http-request ^https:\/\/github\.com\/ header-replace Accept-Language en-us
 http-request ^https:\/\/(raw|gist)\.githubusercontent\.com\/ header-replace Accept-Language en-us
 
+
 [General]
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 
@@ -16,8 +17,6 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 [Rule]
 # > 防止白嫖流量
 PROTOCOL,STUN,REJECT
-# > TG不转圈
-IP-CIDR,95.161.76.100/31,REJECT,no-resolve,pre-matching
 # > 微信消息
 DOMAIN-SUFFIX,weixin.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧,extended-matching
 DOMAIN, badjs.weixinbridge.com, REJECT,pre-matching
@@ -42,26 +41,38 @@ DOMAIN,app-site-association.cdn-apple.com,REJECT,pre-matching
 # 工商银行
 DOMAIN, pageviewp.icbc.com.cn, REJECT,pre-matching
 DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT,pre-matching
-# > 招行掌上生活 (需卸载重装)
-# 开屏广告 mbasecc.bas.cmbchina.com 
-URL-REGEX,^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec, REJECT,pre-matching
-#设置栏目内广告 intellicc.bas.cmbchina.com
-URL-REGEX,^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec, REJECT,pre-matching 
-# 首页随机弹窗
-URL-REGEX,^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId, REJECT,pre-matching 
 # > 淘票票
-URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ , REJECT,pre-matching 
+URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.(queryadvertise|queryloadingbanner)\/ , REJECT,pre-matching 
 
 
 [Map Local]
+# > 淘票票
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ data-type=text data="{}" status-code=200
 # > 智行旅行
 ^https?:\/\/m\.ctrip\.com\/restapi\/[\w\/]+tripAds data-type=text data="{}" status-code=200
 #  > 京东金融 去广告
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture data-type=text data="{}" status-code=200
+# > 掌上生活
+# 开屏广告
+^https?:\/\/mbasecc\.(bas|bcs)\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data-type=text data="{}" status-code=200 
+# 首页随机弹窗
+^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId data-type=text data="{}" status-code=200 
+# > 招商银行
+# hostname = webappcfg.paas.cmbchina.com
+# 开屏广告
+^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data-type=text data="{}" status-code=200
+# 首页横幅广告
+^https?:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic data-type=text data="{}" status-code=200
+# > 同花顺
+^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend data-type=text data=" " status-code=200
+# > 韭研公社
+^https?:\/\/jiucaigongshe\.oss-cn-beijing\.aliyuncs\.com\/[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}\.png data-type=text data="" status-code=200
+
 
 [Body Rewrite]
 # KFC开屏
 http-response-jq ^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/apphome.*\.json 'del(.data.app6_bootStrapAd)'
+
 
 [Script]
 # > 解除微信链接限制
@@ -88,5 +99,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 京东比价 = type=http-response, pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% raw.githubusercontent.com,gist.githubusercontent.com, www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, m.ctrip.com, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com, m.360buyimg.com, in.m.jd.com
+hostname = %APPEND% raw.githubusercontent.com,gist.githubusercontent.com, www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, adm.10jqka.com.cn, jiucaigongshe.oss-cn-beijing.aliyuncs.com, m.ctrip.com, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com, m.360buyimg.com, in.m.jd.com
 
