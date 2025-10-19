@@ -17,6 +17,9 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 [Rule]
 # > 防止白嫖流量
 PROTOCOL,STUN,REJECT
+# > 淘宝
+DOMAIN,heic.alicdn.com,REJECT,extended-matching
+DOMAIN-SUFFIX,h-adashx.ut.taobao.com,REJECT,extended-matching
 # > 微信消息
 DOMAIN-SUFFIX,weixin.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧,extended-matching
 DOMAIN, badjs.weixinbridge.com, REJECT,pre-matching
