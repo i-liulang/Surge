@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2025-10-18
+#!desc=更新时间 2025-10-19
 
 
 [Header Rewrite]
@@ -38,12 +38,13 @@ DOMAIN-SUFFIX, u3.ucweb.com, REJECT,pre-matching
 DOMAIN-KEYWORD, safebrowsing., REJECT,pre-matching
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT,pre-matching
-# 工商银行
+# > 工商银行
 DOMAIN, pageviewp.icbc.com.cn, REJECT,pre-matching
 DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT,pre-matching
 # > 淘票票
 URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.(queryadvertise|queryloadingbanner)\/ , REJECT,pre-matching 
-
+# > 西窗烛
+URL-REGEX,^https?:\/\/lchttpapi\.xczim\.com\/\d\.\d\/functions\/getLaunchImageForIOS , REJECT,pre-matching
 
 [Map Local]
 # > 淘票票
@@ -99,5 +100,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 京东比价 = type=http-response, pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% raw.githubusercontent.com,gist.githubusercontent.com, www.bing.com, res.kfc.com.cn, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, adm.10jqka.com.cn, jiucaigongshe.oss-cn-beijing.aliyuncs.com, m.ctrip.com, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com, m.360buyimg.com, in.m.jd.com
+hostname = %APPEND% raw.githubusercontent.com,gist.githubusercontent.com, www.bing.com, res.kfc.com.cn, acs.m.taobao.com, lchttpapi.xczim.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, adm.10jqka.com.cn, jiucaigongshe.oss-cn-beijing.aliyuncs.com, m.ctrip.com, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com, m.360buyimg.com, in.m.jd.com
 
