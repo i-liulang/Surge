@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2025-10-19
+#!desc=更新时间 2025-10-22
 
 
 [Header Rewrite]
@@ -69,8 +69,6 @@ URL-REGEX,^https?:\/\/lchttpapi\.xczim\.com\/\d\.\d\/functions\/getLaunchImageFo
 ^https?:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic data-type=text data="{}" status-code=200
 # > 同花顺
 ^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend data-type=text data=" " status-code=200
-# > 韭研公社
-^https?:\/\/jiucaigongshe\.oss-cn-beijing\.aliyuncs\.com\/[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}\.png data-type=text data="" status-code=200
 
 
 [Body Rewrite]
@@ -103,5 +101,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/us
 京东比价 = type=http-response, pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% raw.githubusercontent.com,gist.githubusercontent.com, www.bing.com, res.kfc.com.cn, acs.m.taobao.com, lchttpapi.xczim.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, adm.10jqka.com.cn, jiucaigongshe.oss-cn-beijing.aliyuncs.com, m.ctrip.com, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com, m.360buyimg.com, in.m.jd.com
+hostname = %APPEND% raw.githubusercontent.com,gist.githubusercontent.com, www.bing.com, res.kfc.com.cn, acs.m.taobao.com, lchttpapi.xczim.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, adm.10jqka.com.cn, m.ctrip.com, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, api.caiyunapp.com, *.cyapi.cn, nicegram.cloud, app.theinitium.com, m.360buyimg.com, in.m.jd.com
 
