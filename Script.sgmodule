@@ -95,7 +95,7 @@ Nicegram = type=http-response,pattern=^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai
 # > 西窗烛(need登录)
 Nicegram = type=http-response,pattern=^https?:\/\/lchttpapi\.xczim\.com/*,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/dev/raw/main/XiChuangZhuProCrack.js
 # > Forward
-Forward = type=http-request, pattern=^https?:\/\/fluxapi\.vvebo\.vip\/v1\/purchase\/iap\/subscription$, script-path=forward.js, requires-body=true, max-size=-1, timeout=60
+Forward = type=http-request, pattern=^https?:\/\/fluxapi\.vvebo\.vip\/v1\/purchase\/iap\/subscription$, script-path=https://raw.githubusercontent.com/githubdulong/Script/refs/heads/master/forward.js, requires-body=true, max-size=-1, timeout=60
 # > 端传媒会员
 端传媒会员 = type=http-response, pattern=^https?:\/\/app\.theinitium\.com\/subs\/initiummedia_subs\/verify_subscription, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/dcm.js, requires-body=true, max-size=-1, timeout=60
 # > 京东比价
