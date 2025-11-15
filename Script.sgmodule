@@ -94,11 +94,13 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 Nicegram = type=http-response,pattern=^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/MoYu/raw/master/NicegramProCrack.js
 # > 西窗烛(need登录)
 Nicegram = type=http-response,pattern=^https?:\/\/lchttpapi\.xczim\.com/*,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/dev/raw/main/XiChuangZhuProCrack.js
+# > Forward
+Forward = type=http-request, pattern=^https?:\/\/fluxapi\.vvebo\.vip\/v1\/purchase\/iap\/subscription$, script-path=forward.js, requires-body=true, max-size=-1, timeout=60
 # > 端传媒会员
 端传媒会员 = type=http-response, pattern=^https?:\/\/app\.theinitium\.com\/subs\/initiummedia_subs\/verify_subscription, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/dcm.js, requires-body=true, max-size=-1, timeout=60
 # > 京东比价
 京东比价 = type=http-response, pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% raw.githubusercontent.com,gist.githubusercontent.com, www.bing.com, res.kfc.com.cn, acs.m.taobao.com, lchttpapi.xczim.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, adm.10jqka.com.cn, api.touker.com, m.ctrip.com, api.swiftgram.app, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, nicegram.cloud, lchttpapi.xczim.com, app.theinitium.com, m.360buyimg.com, in.m.jd.com
+hostname = %APPEND% raw.githubusercontent.com,gist.githubusercontent.com, www.bing.com, res.kfc.com.cn, acs.m.taobao.com, lchttpapi.xczim.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, adm.10jqka.com.cn, api.touker.com, m.ctrip.com, api.swiftgram.app, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, nicegram.cloud, lchttpapi.xczim.com, fluxapi.vvebo.vip, app.theinitium.com, m.360buyimg.com, in.m.jd.com
 
