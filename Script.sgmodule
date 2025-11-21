@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2025-11-15
+#!desc=更新时间 2025-11-21
 
 
 [Header Rewrite]
@@ -93,7 +93,7 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 # > Nicegram 解锁
 Nicegram = type=http-response,pattern=^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/MoYu/raw/master/NicegramProCrack.js
 # > 西窗烛(need登录)
-Nicegram = type=http-response,pattern=^https?:\/\/lchttpapi\.xczim\.com/*,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/dev/raw/main/XiChuangZhuProCrack.js
+西窗烛 = type=http-response,pattern=^https?:\/\/lchttpapi\.xczim\.com/*,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/dev/raw/main/XiChuangZhuProCrack.js
 # > Forward
 Forward = type=http-request, pattern=^https?:\/\/fluxapi\.vvebo\.vip\/v1\/purchase\/iap\/subscription$, script-path=https://raw.githubusercontent.com/githubdulong/Script/refs/heads/master/forward.js, requires-body=true, max-size=-1, timeout=60
 # > 端传媒会员
