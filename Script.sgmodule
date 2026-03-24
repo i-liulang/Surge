@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=更新时间 2025-12-18
+#!desc=更新时间 2026-03-24
 
 
 [Header Rewrite]
@@ -48,6 +48,9 @@ DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT,pre-matching
 URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.(queryadvertise|queryloadingbanner)\/ , REJECT,pre-matching 
 # > 西窗烛
 URL-REGEX,^https?:\/\/lchttpapi\.xczim\.com\/\d\.\d\/functions\/getLaunchImageForIOS , REJECT,pre-matching
+# > 东方财富
+DOMAIN, emdcadvertise.eastmoney.com, REJECT, extended-matching, pre-matching
+DOMAIN, emdcadvertisepj.eastmoney.com, REJECT, extended-matching, pre-matching
 
 [Map Local]
 # > 淘票票
@@ -71,6 +74,8 @@ URL-REGEX,^https?:\/\/lchttpapi\.xczim\.com\/\d\.\d\/functions\/getLaunchImageFo
 ^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend data-type=text data=" " status-code=200
 # > 华宝智投
 ^https?:\/\/api\.touker\.com\/v\d\/IAdvertisementAPI\.queryStartAdvertisement data-type=text data="" status-code=200
+# > 东方财富
+^https?:\/\/swdlcdn\.eastmoney\.com\/app\/adimg\/ data-type=text data="{}" status-code=200
 
 [Body Rewrite]
 # > KFC开屏
@@ -100,5 +105,5 @@ Forward = type=http-request, pattern=^https?:\/\/fluxapi\.vvebo\.vip\/v1\/purcha
 京东比价 = type=http-response, pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% raw.githubusercontent.com,gist.githubusercontent.com, www.bing.com, res.kfc.com.cn, acs.m.taobao.com, lchttpapi.xczim.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, adm.10jqka.com.cn, api.touker.com, m.ctrip.com, api.swiftgram.app, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, lchttpapi.xczim.com, fluxapi.vvebo.vip, app.theinitium.com, m.360buyimg.com, in.m.jd.com
+hostname = %APPEND% raw.githubusercontent.com,gist.githubusercontent.com, www.bing.com, res.kfc.com.cn, acs.m.taobao.com, lchttpapi.xczim.com, swdlcdn.eastmoney.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, adm.10jqka.com.cn, api.touker.com, m.ctrip.com, api.swiftgram.app, ms.jr.jd.com, security.wechat.com, weixin110.qq.com, *.camscanner.com, *.intsig.net, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, mb3admin.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, lchttpapi.xczim.com, fluxapi.vvebo.vip, app.theinitium.com, m.360buyimg.com, in.m.jd.com
 
