@@ -35,6 +35,8 @@ DOMAIN,sub-store.vercel.app,𝗣𝗿𝗼𝘅𝘆
 DOMAIN,scripthub.vercel.app,𝗣𝗿𝗼𝘅𝘆
 # > 心动源代理
 DOMAIN-SUFFIX,applehub.cn,𝗣𝗿𝗼𝘅𝘆
+# > baby代理
+DOMAIN-SUFFIX,one-api.zzxu.de,𝗣𝗿𝗼𝘅𝘆
 # > 安全浏览限制解除
 DOMAIN, lookup.api.bsb.baidu.com, REJECT,pre-matching
 DOMAIN-SUFFIX, u3.ucweb.com, REJECT,pre-matching
